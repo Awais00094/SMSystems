@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="62797af08ba64584a3ce7646ce8a70ec" Name="Diagram1">
+        <EntityTypeShape EntityType="SMSModel.CategoriesFor" Width="1.5" PointX="0.75" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMSModel.City" Width="1.5" PointX="3.75" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMSModel.Color" Width="1.5" PointX="0.75" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMSModel.Company" Width="1.5" PointX="0.75" PointY="23.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMSModel.Country" Width="1.5" PointX="1.5" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMSModel.Expens" Width="1.5" PointX="11.5" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMSModel.ExpenseType" Width="1.5" PointX="9.25" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMSModel.ProductCategory" Width="1.5" PointX="0.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMSModel.Product" Width="1.5" PointX="3" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMSModel.ProductStock" Width="1.5" PointX="5.25" PointY="15.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMSModel.Purchase" Width="1.5" PointX="8.25" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMSModel.PurchasePayment" Width="1.5" PointX="10.5" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMSModel.Role" Width="1.5" PointX="1.5" PointY="19.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMSModel.Shopping" Width="1.5" PointX="6" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMSModel.ShoppingDetail" Width="1.5" PointX="8.25" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMSModel.ShoppingInvoice" Width="1.5" PointX="11.25" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMSModel.Size" Width="1.5" PointX="0.75" PointY="28.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMSModel.State" Width="1.5" PointX="1.5" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMSModel.Status" Width="1.5" PointX="0.75" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMSModel.SupplierDetail" Width="1.5" PointX="8.25" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMSModel.Supplier" Width="1.5" PointX="6" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMSModel.Transaction" Width="1.5" PointX="13.75" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMSModel.User" Width="1.5" PointX="3.75" PointY="18.5" IsExpanded="true" />
+        <AssociationConnector Association="SMSModel.FK_Products_CategoriesFor" ManuallyRouted="false" />
+        <AssociationConnector Association="SMSModel.FK_Cities_States" ManuallyRouted="false" />
+        <AssociationConnector Association="SMSModel.FK_Suppliers_Cities" ManuallyRouted="false" />
+        <AssociationConnector Association="SMSModel.FK_Products_Colors" ManuallyRouted="false" />
+        <AssociationConnector Association="SMSModel.FK_Products_Companies" ManuallyRouted="false" />
+        <AssociationConnector Association="SMSModel.FK_States_Countries" ManuallyRouted="false" />
+        <AssociationConnector Association="SMSModel.FK_Expenses_ExpenseType" ManuallyRouted="false" />
+        <AssociationConnector Association="SMSModel.FK_Expenses_User" ManuallyRouted="false" />
+        <AssociationConnector Association="SMSModel.FK_Transactions_Expenses" ManuallyRouted="false" />
+        <AssociationConnector Association="SMSModel.FK_Products_ProductCategories" ManuallyRouted="false" />
+        <AssociationConnector Association="SMSModel.FK_Products_Sizes" ManuallyRouted="false" />
+        <AssociationConnector Association="SMSModel.FK_Products_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="SMSModel.FK_Products_User" ManuallyRouted="false" />
+        <AssociationConnector Association="SMSModel.FK_ProductStock_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="SMSModel.FK_Purchase_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="SMSModel.FK_ShoppingDetail_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="SMSModel.FK_Purchase_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="SMSModel.FK_Purchase_Suppliers" ManuallyRouted="false" />
+        <AssociationConnector Association="SMSModel.FK_Purchase_User" ManuallyRouted="false" />
+        <AssociationConnector Association="SMSModel.FK_PurchasePayment_PurchasePayment" ManuallyRouted="false" />
+        <AssociationConnector Association="SMSModel.FK_Transactions_PurchasePayment" ManuallyRouted="false" />
+        <AssociationConnector Association="SMSModel.FK_User_Role" ManuallyRouted="false" />
+        <AssociationConnector Association="SMSModel.FK_Shopping_Shopping" ManuallyRouted="false" />
+        <AssociationConnector Association="SMSModel.FK_Shopping_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="SMSModel.FK_Shopping_User" ManuallyRouted="false" />
+        <AssociationConnector Association="SMSModel.FK_ShoppingInvoice_Shopping" ManuallyRouted="false" />
+        <AssociationConnector Association="SMSModel.FK_Transactions_Shopping" ManuallyRouted="false" />
+        <AssociationConnector Association="SMSModel.FK_ShoppingDetail_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="SMSModel.FK_ShoppingDetail_User" ManuallyRouted="false" />
+        <AssociationConnector Association="SMSModel.FK_ShoppingInvoice_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="SMSModel.FK_ShoppingInvoice_User" ManuallyRouted="false" />
+        <AssociationConnector Association="SMSModel.FK_Suppliers_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="SMSModel.FK_Transactions_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="SMSModel.FK_SupplierDetails_Suppliers" ManuallyRouted="false" />
+        <AssociationConnector Association="SMSModel.FK_Suppliers_User" ManuallyRouted="false" />
+        <AssociationConnector Association="SMSModel.FK_Transactions_Suppliers" ManuallyRouted="false" />
+        <AssociationConnector Association="SMSModel.FK_Transactions_User" ManuallyRouted="false" />
+        <AssociationConnector Association="SMSModel.FK_Expenses_Status" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
