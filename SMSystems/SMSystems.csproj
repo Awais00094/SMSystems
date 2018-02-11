@@ -87,6 +87,12 @@
     <Compile Include="AddExpenseForm.Designer.cs">
       <DependentUpon>AddExpenseForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddPurchase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddPurchase.Designer.cs">
+      <DependentUpon>AddPurchase.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddSupplier.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,12 @@
     </Compile>
     <Compile Include="CompanyForm.Designer.cs">
       <DependentUpon>CompanyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Purchasing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchasing.Designer.cs">
+      <DependentUpon>Purchasing.cs</DependentUpon>
     </Compile>
     <Compile Include="UpdateExpense.cs">
       <SubType>Form</SubType>
@@ -211,6 +223,9 @@
     <EmbeddedResource Include="AddExpenseForm.resx">
       <DependentUpon>AddExpenseForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddPurchase.resx">
+      <DependentUpon>AddPurchase.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddSupplier.resx">
       <DependentUpon>AddSupplier.cs</DependentUpon>
     </EmbeddedResource>
@@ -222,6 +237,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CompanyForm.resx">
       <DependentUpon>CompanyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchasing.resx">
+      <DependentUpon>Purchasing.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateExpense.resx">
       <DependentUpon>UpdateExpense.cs</DependentUpon>

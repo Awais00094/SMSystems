@@ -51,6 +51,7 @@
             this.button9 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.PurchasesBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -59,6 +60,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel1.Controls.Add(this.PurchasesBtn);
             this.panel1.Controls.Add(this.button11);
             this.panel1.Controls.Add(this.button8);
             this.panel1.Controls.Add(this.buttonIndicator);
@@ -362,6 +364,24 @@
             this.panel4.Size = new System.Drawing.Size(970, 1);
             this.panel4.TabIndex = 12;
             // 
+            // PurchasesBtn
+            // 
+            this.PurchasesBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.PurchasesBtn.FlatAppearance.BorderSize = 0;
+            this.PurchasesBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PurchasesBtn.Font = new System.Drawing.Font("Segoe UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PurchasesBtn.ForeColor = System.Drawing.Color.White;
+            this.PurchasesBtn.Image = ((System.Drawing.Image)(resources.GetObject("PurchasesBtn.Image")));
+            this.PurchasesBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.PurchasesBtn.Location = new System.Drawing.Point(12, 357);
+            this.PurchasesBtn.Name = "PurchasesBtn";
+            this.PurchasesBtn.Size = new System.Drawing.Size(176, 38);
+            this.PurchasesBtn.TabIndex = 13;
+            this.PurchasesBtn.Text = "     Purchases";
+            this.PurchasesBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.PurchasesBtn.UseVisualStyleBackColor = true;
+            this.PurchasesBtn.Click += new System.EventHandler(this.PurchasesBtn_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -413,6 +433,7 @@
         private System.Windows.Forms.Panel Container;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button PurchasesBtn;
     }
 }
 

@@ -115,5 +115,18 @@ namespace SMSystems
             objForm.Dock = DockStyle.Fill;
             objForm.Show();
         }
+
+        private void PurchasesBtn_Click(object sender, EventArgs e)
+        {
+            buttonIndicator.Height = PurchasesBtn.Height;
+            buttonIndicator.Top = PurchasesBtn.Top;
+            Container.Controls.Clear();
+            Purchasing objForm = new Purchasing();
+            objForm.TopLevel = false;
+            Container.Controls.Add(objForm);
+            objForm.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            objForm.Dock = DockStyle.Fill;
+            objForm.Show();
+        }
     }
 }

@@ -189,7 +189,9 @@
             this.Controls.Add(this.AddAmounttxt);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "AddExpenseForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddExpenseForm";
             this.ResumeLayout(false);
             this.PerformLayout();
