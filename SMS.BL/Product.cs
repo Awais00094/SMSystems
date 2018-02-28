@@ -17,7 +17,8 @@ namespace SMS.BL
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Product()
         {
-            this.Purchases = new HashSet<Purchase>();
+            this.ProductStocks = new HashSet<ProductStock>();
+            this.PurchaseDetails = new HashSet<PurchaseDetail>();
             this.ShoppingDetails = new HashSet<ShoppingDetail>();
         }
     
@@ -44,9 +45,10 @@ namespace SMS.BL
         public virtual Size Size { get; set; }
         public virtual Status Status { get; set; }
         public virtual User User { get; set; }
-        public virtual ProductStock ProductStock { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Purchase> Purchases { get; set; }
+        public virtual ICollection<ProductStock> ProductStocks { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PurchaseDetail> PurchaseDetails { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ShoppingDetail> ShoppingDetails { get; set; }
     }

@@ -91,5 +91,57 @@ namespace SMS.BL.BLL
             s = db.Suppliers.Where(x => x.ID == ID && x.StatusID==1).FirstOrDefault();
             return s;
         }
+        public static decimal GetSupplierTotalRemainingAmount(long ID)
+        {
+            SMSEntities db = new SMSEntities();
+            SupplierDetail sd = new SupplierDetail();
+
+            sd = db.SupplierDetails.Where(x => x.SupplierID == ID).FirstOrDefault();
+            if(sd!=null)
+            {
+                return sd.TotalRemaining.Value;
+            }
+            return -1;
+        }
+        public static long AddSupplierPayment(SupplierPaymentModel model)
+        {
+            //long SupplierID = -1;
+            SMSEntities db = new SMSEntities();
+            SupplierDetail supplierdetail = new SupplierDetail();
+
+            using (var dbContextTransaction = db.Database.BeginTransaction())
+            {
+                try
+                {
+                    supplierdetail = db.SupplierDetails.Where(x => x.SupplierID == model.SupplierID).FirstOrDefault();
+                    if (supplierdetail != null)
+                    {
+                        supplierdetail.dtDate = model.dtDate;
+                        //supplierdetail.SupplierID = model.SupplierID;
+                        supplierdetail.TotalPaid += model.AmoutPay;
+                        supplierdetail.TotalRemaining = supplierdetail.TotalRemaining - model.AmoutPay;
+                        db.SupplierDetails.Attach(supplierdetail);
+                        db.Entry(supplierdetail).State = System.Data.Entity.EntityState.Modified;
+                        db.SaveChanges();
+
+                        Transaction transaction = new Transaction();
+                        transaction.dCredit = model.AmoutPay;
+                        transaction.dtDate = System.DateTime.Now;
+                        transaction.SupplierID = supplierdetail.SupplierID;
+                        transaction.StatusID = 1;
+                    }
+
+                    dbContextTransaction.Commit();
+                    return supplierdetail.ID;
+                }
+                catch (Exception)
+                {
+                    dbContextTransaction.Rollback();
+                    return -1;
+                }
+            }
+
+
+        }
     }
 }

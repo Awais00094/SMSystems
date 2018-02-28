@@ -16,7 +16,7 @@ namespace SMS.BL
     {
         public long ID { get; set; }
         public Nullable<long> ProductID { get; set; }
-        public Nullable<long> Quantity { get; set; }
+        public Nullable<int> Quantity { get; set; }
         public Nullable<System.DateTime> dtDate { get; set; }
     
         public virtual Product Product { get; set; }

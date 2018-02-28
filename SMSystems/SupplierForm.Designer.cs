@@ -36,6 +36,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.bunifuCards3 = new Bunifu.Framework.UI.BunifuCards();
+            this.AddSupplierPayment = new System.Windows.Forms.Button();
             this.Addbtn = new System.Windows.Forms.Button();
             this.updatebtn = new System.Windows.Forms.Button();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -120,6 +121,7 @@
             this.bunifuCards3.BorderRadius = 5;
             this.bunifuCards3.BottomSahddow = true;
             this.bunifuCards3.color = System.Drawing.Color.SaddleBrown;
+            this.bunifuCards3.Controls.Add(this.AddSupplierPayment);
             this.bunifuCards3.Controls.Add(this.Addbtn);
             this.bunifuCards3.Controls.Add(this.updatebtn);
             this.bunifuCards3.Controls.Add(this.bunifuCustomLabel2);
@@ -129,8 +131,25 @@
             this.bunifuCards3.Name = "bunifuCards3";
             this.bunifuCards3.RightSahddow = true;
             this.bunifuCards3.ShadowDepth = 20;
-            this.bunifuCards3.Size = new System.Drawing.Size(243, 159);
+            this.bunifuCards3.Size = new System.Drawing.Size(243, 204);
             this.bunifuCards3.TabIndex = 32;
+            // 
+            // AddSupplierPayment
+            // 
+            this.AddSupplierPayment.FlatAppearance.BorderSize = 0;
+            this.AddSupplierPayment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddSupplierPayment.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddSupplierPayment.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.AddSupplierPayment.Image = ((System.Drawing.Image)(resources.GetObject("AddSupplierPayment.Image")));
+            this.AddSupplierPayment.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AddSupplierPayment.Location = new System.Drawing.Point(43, 53);
+            this.AddSupplierPayment.Name = "AddSupplierPayment";
+            this.AddSupplierPayment.Size = new System.Drawing.Size(156, 32);
+            this.AddSupplierPayment.TabIndex = 47;
+            this.AddSupplierPayment.Text = "     Add Payments";
+            this.AddSupplierPayment.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.AddSupplierPayment.UseVisualStyleBackColor = true;
+            this.AddSupplierPayment.Click += new System.EventHandler(this.AddSupplierPayment_Click);
             // 
             // Addbtn
             // 
@@ -140,11 +159,11 @@
             this.Addbtn.ForeColor = System.Drawing.Color.SaddleBrown;
             this.Addbtn.Image = ((System.Drawing.Image)(resources.GetObject("Addbtn.Image")));
             this.Addbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Addbtn.Location = new System.Drawing.Point(59, 33);
+            this.Addbtn.Location = new System.Drawing.Point(43, 91);
             this.Addbtn.Name = "Addbtn";
-            this.Addbtn.Size = new System.Drawing.Size(144, 28);
+            this.Addbtn.Size = new System.Drawing.Size(156, 32);
             this.Addbtn.TabIndex = 46;
-            this.Addbtn.Text = "    Insert";
+            this.Addbtn.Text = "     Insert";
             this.Addbtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Addbtn.UseVisualStyleBackColor = true;
             this.Addbtn.Click += new System.EventHandler(this.Addbtn_Click);
@@ -157,9 +176,9 @@
             this.updatebtn.ForeColor = System.Drawing.Color.SaddleBrown;
             this.updatebtn.Image = ((System.Drawing.Image)(resources.GetObject("updatebtn.Image")));
             this.updatebtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.updatebtn.Location = new System.Drawing.Point(55, 68);
+            this.updatebtn.Location = new System.Drawing.Point(43, 130);
             this.updatebtn.Name = "updatebtn";
-            this.updatebtn.Size = new System.Drawing.Size(148, 30);
+            this.updatebtn.Size = new System.Drawing.Size(156, 30);
             this.updatebtn.TabIndex = 31;
             this.updatebtn.Text = "     Update";
             this.updatebtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -186,9 +205,9 @@
             this.Deletebtn.ForeColor = System.Drawing.Color.SaddleBrown;
             this.Deletebtn.Image = ((System.Drawing.Image)(resources.GetObject("Deletebtn.Image")));
             this.Deletebtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Deletebtn.Location = new System.Drawing.Point(55, 103);
+            this.Deletebtn.Location = new System.Drawing.Point(43, 165);
             this.Deletebtn.Name = "Deletebtn";
-            this.Deletebtn.Size = new System.Drawing.Size(148, 28);
+            this.Deletebtn.Size = new System.Drawing.Size(156, 28);
             this.Deletebtn.TabIndex = 13;
             this.Deletebtn.Text = "     Delete";
             this.Deletebtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -241,5 +260,6 @@
         private System.Windows.Forms.DataGridView SupplierGridView;
         private System.Windows.Forms.Button updatebtn;
         private System.Windows.Forms.Button Addbtn;
+        private System.Windows.Forms.Button AddSupplierPayment;
     }
 }

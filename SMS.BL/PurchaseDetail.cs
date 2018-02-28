@@ -12,26 +12,21 @@ namespace SMS.BL
     using System;
     using System.Collections.Generic;
     
-    public partial class Expens
+    public partial class PurchaseDetail
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Expens()
-        {
-            this.Transactions = new HashSet<Transaction>();
-        }
-    
         public long ID { get; set; }
-        public Nullable<long> ExpenseTypeID { get; set; }
-        public Nullable<decimal> Amount { get; set; }
+        public Nullable<long> ProductID { get; set; }
+        public Nullable<int> TotalPairs { get; set; }
+        public Nullable<decimal> WSalePairPrice { get; set; }
+        public Nullable<decimal> TotalPurchasePrice { get; set; }
         public Nullable<System.DateTime> dtDate { get; set; }
-        public string Description { get; set; }
         public Nullable<long> UserID { get; set; }
         public Nullable<long> StatusID { get; set; }
+        public Nullable<long> PurchaseID { get; set; }
     
-        public virtual ExpenseType ExpenseType { get; set; }
+        public virtual Product Product { get; set; }
+        public virtual Purchase Purchase { get; set; }
         public virtual Status Status { get; set; }
         public virtual User User { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Transaction> Transactions { get; set; }
     }
 }

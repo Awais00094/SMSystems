@@ -54,6 +54,9 @@
     <Compile Include="BLL\CommonBLL.cs" />
     <Compile Include="BLL\ExpenseBLL.cs" />
     <Compile Include="BLL\ProductBLL.cs" />
+    <Compile Include="BLL\PurchaseBLL.cs" />
+    <Compile Include="BLL\ReportBLL.cs" />
+    <Compile Include="BLL\SQLBLL.cs" />
     <Compile Include="BLL\SupplierBLL.cs" />
     <Compile Include="BLL\TransactionsBLL.cs" />
     <Compile Include="CategoriesFor.cs">
@@ -78,9 +81,12 @@
     <Compile Include="Entities\ExpenseList.cs" />
     <Compile Include="Entities\ProductList.cs" />
     <Compile Include="Entities\ProductModel.cs" />
+    <Compile Include="Entities\PurchaseProductDetailItem.cs" />
     <Compile Include="Entities\RoleModel.cs" />
+    <Compile Include="Entities\StockModel.cs" />
     <Compile Include="Entities\SupplierList.cs" />
     <Compile Include="Entities\SupplierModel.cs" />
+    <Compile Include="Entities\SupplierPaymentModel.cs" />
     <Compile Include="Entities\TransactionModel.cs" />
     <Compile Include="Entities\UserModel.cs" />
     <Compile Include="Enum\Enums.cs" />
@@ -101,6 +107,9 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Purchase.cs">
+      <DependentUpon>SMSEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PurchaseDetail.cs">
       <DependentUpon>SMSEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="PurchasePayment.cs">

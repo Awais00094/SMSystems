@@ -17,24 +17,25 @@ namespace SMS.BL
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Purchase()
         {
-            this.PurchasePayments = new HashSet<PurchasePayment>();
+            this.PurchaseDetails = new HashSet<PurchaseDetail>();
         }
     
         public long ID { get; set; }
-        public Nullable<long> ProductID { get; set; }
         public Nullable<long> SupplierID { get; set; }
-        public Nullable<int> TotalPairs { get; set; }
-        public Nullable<decimal> PairPrice { get; set; }
-        public Nullable<decimal> TotalPurchasePrice { get; set; }
         public Nullable<System.DateTime> dtDate { get; set; }
+        public string PurchaseInvoiceNo { get; set; }
+        public Nullable<int> TotalPairsQuantity { get; set; }
+        public Nullable<decimal> TotalPurchaseValue { get; set; }
+        public Nullable<decimal> TotalDiscountValue { get; set; }
+        public Nullable<decimal> NetTotalValue { get; set; }
         public Nullable<long> UserID { get; set; }
         public Nullable<long> StatusID { get; set; }
+        public Nullable<System.DateTime> PurchaseDate { get; set; }
     
-        public virtual Product Product { get; set; }
         public virtual Status Status { get; set; }
         public virtual Supplier Supplier { get; set; }
         public virtual User User { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PurchasePayment> PurchasePayments { get; set; }
+        public virtual ICollection<PurchaseDetail> PurchaseDetails { get; set; }
     }
 }

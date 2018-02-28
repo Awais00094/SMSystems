@@ -29,7 +29,6 @@ namespace SMS.BL
         public Nullable<System.DateTime> dtDate { get; set; }
         public Nullable<long> UserID { get; set; }
     
-        public virtual Purchase Purchase { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Transaction> Transactions { get; set; }
     }

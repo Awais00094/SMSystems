@@ -61,5 +61,11 @@ namespace SMSystems
             }
 
         }
+
+        private void AddSupplierPayment_Click(object sender, EventArgs e)
+        {
+            AddSupplierPayment form = new AddSupplierPayment();
+            form.ShowDialog();
+        }
     }
 }

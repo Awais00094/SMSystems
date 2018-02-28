@@ -30,7 +30,7 @@ namespace SMSystems
             this.updatebtn.Enabled = state;
             this.Deletebtn.Enabled = state;
         }
-        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        private void SizeGridView_SelectionChanged(object sender, EventArgs e)
         {
             if (SizeGridView.SelectedRows.Count != 0)
             {
@@ -113,6 +113,11 @@ namespace SMSystems
             string text = this.Searchtxt.Text;
             var SearchData = SearchList.Where(x => x.Name.StartsWith(text));
             this.SizeGridView.DataSource = SearchData;
+        }
+
+        private void SizeForm_Load(object sender, EventArgs e)
+        {
+            SizeGridView.ClearSelection();
         }
     }
 }

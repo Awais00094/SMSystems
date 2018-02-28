@@ -74,7 +74,7 @@ namespace SMSystems
             var dt = CommonBLL.GetColorList();
             this.GridView.DataSource = dt;
             this.GridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-
+            
         }
 
         private void updatebtn_Click(object sender, EventArgs e)
@@ -104,6 +104,11 @@ namespace SMSystems
             {
                 MessageBox.Show("Exception Occurs" + ex.Message);
             }
+        }
+
+        private void ColorForm_Load(object sender, EventArgs e)
+        {
+            GridView.ClearSelection();
         }
     }
 }

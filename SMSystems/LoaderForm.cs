@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace SMSystems
 {
-    public partial class Purchasing : Form
+    public partial class LoaderForm : Form
     {
-        public Purchasing()
+        public LoaderForm()
         {
             InitializeComponent();
-        }
-
-        private void AddPurchasebtn_Click(object sender, EventArgs e)
-        {
-            AddPurchase AddPurchaseForm = new AddPurchase();
-            AddPurchaseForm.ShowDialog();
         }
     }
 }
