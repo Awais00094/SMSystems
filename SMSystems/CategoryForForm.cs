@@ -105,5 +105,10 @@ namespace SMSystems
                 MessageBox.Show("Exception Occurs" + ex.Message);
             }
         }
+
+        private void CategoryForForm_Load(object sender, EventArgs e)
+        {
+            GridView.ClearSelection();
+        }
     }
 }

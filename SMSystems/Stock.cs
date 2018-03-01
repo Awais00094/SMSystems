@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SMS.BL.BLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,17 @@ namespace SMSystems
         public Stock()
         {
             InitializeComponent();
+            fillGrid();
+        }
+        void fillGrid()
+        {
+            var list = ReportBLL.GetProductStockList();
+            this.StockGridView.DataSource = list;
+            this.StockGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+        }
+        private void colorbtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

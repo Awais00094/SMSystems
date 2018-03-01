@@ -246,6 +246,7 @@
             this.MinDiscounttxt.Name = "MinDiscounttxt";
             this.MinDiscounttxt.Size = new System.Drawing.Size(187, 22);
             this.MinDiscounttxt.TabIndex = 17;
+            this.MinDiscounttxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MinDiscounttxt_KeyPress);
             // 
             // maxDiscounttxt
             // 
@@ -254,6 +255,7 @@
             this.maxDiscounttxt.Name = "maxDiscounttxt";
             this.maxDiscounttxt.Size = new System.Drawing.Size(187, 22);
             this.maxDiscounttxt.TabIndex = 18;
+            this.maxDiscounttxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.maxDiscounttxt_KeyPress);
             // 
             // salePricetxt
             // 
@@ -262,6 +264,7 @@
             this.salePricetxt.Name = "salePricetxt";
             this.salePricetxt.Size = new System.Drawing.Size(187, 22);
             this.salePricetxt.TabIndex = 19;
+            this.salePricetxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.salePricetxt_KeyPress);
             // 
             // ProductdTPicker
             // 
@@ -325,7 +328,7 @@
             this.button7.ForeColor = System.Drawing.Color.White;
             this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
             this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(562, 21);
+            this.button7.Location = new System.Drawing.Point(764, 21);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(33, 38);
             this.button7.TabIndex = 34;

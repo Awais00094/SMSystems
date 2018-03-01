@@ -99,5 +99,9 @@ namespace SMSystems
             ExpenseTypeCombo.ValueMember = "ID";
         }
 
+        private void Amounttxt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validator.ValidateDecimal(sender, e);
+        }
     }
 }

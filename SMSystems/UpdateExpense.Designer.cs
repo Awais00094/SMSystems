@@ -135,6 +135,7 @@
             this.Amounttxt.Name = "Amounttxt";
             this.Amounttxt.Size = new System.Drawing.Size(153, 20);
             this.Amounttxt.TabIndex = 48;
+            this.Amounttxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Amounttxt_KeyPress);
             // 
             // label1
             // 

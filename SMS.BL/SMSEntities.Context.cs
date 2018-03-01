@@ -36,6 +36,7 @@ namespace SMS.BL
         public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<ProductStock> ProductStocks { get; set; }
         public virtual DbSet<Purchase> Purchases { get; set; }
+        public virtual DbSet<PurchaseDetail> PurchaseDetails { get; set; }
         public virtual DbSet<PurchasePayment> PurchasePayments { get; set; }
         public virtual DbSet<Role> Roles { get; set; }
         public virtual DbSet<Shopping> Shoppings { get; set; }

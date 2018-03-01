@@ -121,17 +121,26 @@
   <data name="Bell-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Bell-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="loader3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\loader3.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Bag-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Bag-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="hand-shake" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\hand-shake.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Home-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Home-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Settings-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Settings-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Search-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Search-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Minimize-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Minimize-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Home-241" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Home-241.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Maximize-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Maximize-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Search-18" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Search-18.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -139,20 +148,23 @@
   <data name="Power Settings New-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Power Settings New-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Search-241" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Search-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Search-20" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Search-20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Area Chart-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Area Chart-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Search-241" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Search-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="loader" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\loader.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Help-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Help-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Home-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Home-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="hand-shake" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hand-shake.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Banknotes-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Banknotes-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -160,7 +172,16 @@
   <data name="Line Chart-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Line Chart-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Home-241" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Home-241.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Search-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Search-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Close-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Close-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Crop Square-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Crop Square-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Minus-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Minus-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

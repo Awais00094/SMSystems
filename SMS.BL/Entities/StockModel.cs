@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace SMS.BL.Entities
 {
-    public class SizeModel
+    public class StockModel
     {
-        public long ID { get; set; }
-        public string Number { get; set; }
-        public string Description { get; set; }
+        public string ArticalNo  { get; set; }
+
+        public int TotalStock { get; set; }
+
     }
 }

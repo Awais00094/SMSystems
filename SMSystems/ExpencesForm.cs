@@ -53,7 +53,11 @@ namespace SMSystems
         private void updatebtn_Click(object sender, EventArgs e)
         {
             UpdateExpense form = new UpdateExpense(ID);
+           // form.FormClosed += new FormClosedEventHandler(child_FormClosed); //add handler to catch when child form is closed
             form.ShowDialog();
+            //this.Refresh();        
+            FillGrid();
+            ChangingFeildsVisibility(false);
         }
 
         private void Addbtn_Click_1(object sender, EventArgs e)
@@ -61,5 +65,10 @@ namespace SMSystems
             AddExpenseForm form = new AddExpenseForm();
             form.ShowDialog();
         }
+        //void child_FormClosed(object sender, FormClosedEventArgs e)
+        //{
+        //    //when child form is closed, this code is executed
+        //    this.Refresh();
+        //}
     }
 }

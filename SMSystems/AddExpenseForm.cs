@@ -14,6 +14,16 @@ namespace SMSystems
 {
     public partial class AddExpenseForm : Form
     {
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                const int CS_DROPSHADOW = 0x20000;
+                CreateParams cp = base.CreateParams;
+                cp.ClassStyle |= CS_DROPSHADOW;
+                return cp;
+            }
+        }
         public AddExpenseForm()
         {
             InitializeComponent();
@@ -106,6 +116,16 @@ namespace SMSystems
         private void ExpenseTypeCombo_DropDown(object sender, EventArgs e)
         {
             FillExpenseTypeComboBox();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void AddAmounttxt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validator.ValidateDecimal(sender, e);
         }
     }
 }

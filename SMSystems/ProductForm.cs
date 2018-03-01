@@ -157,5 +157,20 @@ namespace SMSystems
 
             return ProductBLL.AddProduct(model);
         }
+
+        private void salePricetxt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validator.ValidateDecimal(sender, e);
+        }
+
+        private void MinDiscounttxt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validator.ValidateDecimal(sender, e);
+        }
+
+        private void maxDiscounttxt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validator.ValidateDecimal(sender, e);
+        }
     }
 }

@@ -37,7 +37,7 @@ namespace SMSystems
         {
             ProductForm form = new ProductForm();
             form.ShowDialog();
-
+            FillGrid();
         }
 
         private void ProductGridView_SelectionChanged(object sender, EventArgs e)
@@ -57,6 +57,7 @@ namespace SMSystems
         {
             UpdateProductForm form = new UpdateProductForm(ID);
             form.ShowDialog();
+            FillGrid();
         }
 
         private void deletebtn_Click(object sender, EventArgs e)

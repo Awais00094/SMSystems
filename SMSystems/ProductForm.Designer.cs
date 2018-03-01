@@ -58,7 +58,6 @@
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
-            this.radGroupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -123,7 +122,7 @@
             this.label6.ForeColor = System.Drawing.Color.SaddleBrown;
             this.label6.Location = new System.Drawing.Point(11, 208);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(68, 17);
+            this.label6.Size = new System.Drawing.Size(69, 17);
             this.label6.TabIndex = 5;
             this.label6.Text = "Shoe Type";
             // 
@@ -247,6 +246,7 @@
             this.MinDiscounttxt.Name = "MinDiscounttxt";
             this.MinDiscounttxt.Size = new System.Drawing.Size(187, 22);
             this.MinDiscounttxt.TabIndex = 17;
+            this.MinDiscounttxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MinDiscounttxt_KeyPress);
             // 
             // maxDiscounttxt
             // 
@@ -255,6 +255,7 @@
             this.maxDiscounttxt.Name = "maxDiscounttxt";
             this.maxDiscounttxt.Size = new System.Drawing.Size(187, 22);
             this.maxDiscounttxt.TabIndex = 18;
+            this.maxDiscounttxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.maxDiscounttxt_KeyPress);
             // 
             // salePricetxt
             // 
@@ -263,7 +264,7 @@
             this.salePricetxt.Name = "salePricetxt";
             this.salePricetxt.Size = new System.Drawing.Size(187, 22);
             this.salePricetxt.TabIndex = 19;
-            this.salePricetxt.Text = " ";
+            this.salePricetxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.salePricetxt_KeyPress);
             // 
             // ProductdTPicker
             // 
@@ -395,8 +396,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ProductForm";
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();
-            this.radGroupBox1.ResumeLayout(false);
-            this.radGroupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }

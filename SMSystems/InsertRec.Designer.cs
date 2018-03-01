@@ -57,12 +57,13 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(163, 514);
+            this.panel1.Size = new System.Drawing.Size(150, 514);
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // Companiesbtn
             // 
+            this.Companiesbtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Companiesbtn.FlatAppearance.BorderSize = 0;
             this.Companiesbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Companiesbtn.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -71,7 +72,7 @@
             this.Companiesbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Companiesbtn.Location = new System.Drawing.Point(12, 123);
             this.Companiesbtn.Name = "Companiesbtn";
-            this.Companiesbtn.Size = new System.Drawing.Size(146, 28);
+            this.Companiesbtn.Size = new System.Drawing.Size(146, 33);
             this.Companiesbtn.TabIndex = 6;
             this.Companiesbtn.Text = "     Companies";
             this.Companiesbtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -83,11 +84,12 @@
             this.buttonIndicator.BackColor = System.Drawing.Color.SaddleBrown;
             this.buttonIndicator.Location = new System.Drawing.Point(6, 9);
             this.buttonIndicator.Name = "buttonIndicator";
-            this.buttonIndicator.Size = new System.Drawing.Size(5, 28);
+            this.buttonIndicator.Size = new System.Drawing.Size(5, 33);
             this.buttonIndicator.TabIndex = 4;
             // 
             // colorbtn
             // 
+            this.colorbtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.colorbtn.FlatAppearance.BorderSize = 0;
             this.colorbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.colorbtn.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -96,7 +98,7 @@
             this.colorbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.colorbtn.Location = new System.Drawing.Point(12, 47);
             this.colorbtn.Name = "colorbtn";
-            this.colorbtn.Size = new System.Drawing.Size(146, 28);
+            this.colorbtn.Size = new System.Drawing.Size(146, 33);
             this.colorbtn.TabIndex = 5;
             this.colorbtn.Text = "     Colors";
             this.colorbtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -105,6 +107,7 @@
             // 
             // categoriesbtn
             // 
+            this.categoriesbtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.categoriesbtn.FlatAppearance.BorderSize = 0;
             this.categoriesbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.categoriesbtn.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -113,7 +116,7 @@
             this.categoriesbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.categoriesbtn.Location = new System.Drawing.Point(12, 85);
             this.categoriesbtn.Name = "categoriesbtn";
-            this.categoriesbtn.Size = new System.Drawing.Size(146, 28);
+            this.categoriesbtn.Size = new System.Drawing.Size(146, 33);
             this.categoriesbtn.TabIndex = 4;
             this.categoriesbtn.Text = "     Categories";
             this.categoriesbtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -122,6 +125,7 @@
             // 
             // shoetype
             // 
+            this.shoetype.Cursor = System.Windows.Forms.Cursors.Hand;
             this.shoetype.FlatAppearance.BorderSize = 0;
             this.shoetype.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.shoetype.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -130,7 +134,7 @@
             this.shoetype.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.shoetype.Location = new System.Drawing.Point(12, 161);
             this.shoetype.Name = "shoetype";
-            this.shoetype.Size = new System.Drawing.Size(146, 28);
+            this.shoetype.Size = new System.Drawing.Size(146, 33);
             this.shoetype.TabIndex = 3;
             this.shoetype.Text = "     Shoe Type";
             this.shoetype.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -140,6 +144,7 @@
             // expensebtn
             // 
             this.expensebtn.BackColor = System.Drawing.SystemColors.Control;
+            this.expensebtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.expensebtn.FlatAppearance.BorderSize = 0;
             this.expensebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.expensebtn.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -148,7 +153,7 @@
             this.expensebtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.expensebtn.Location = new System.Drawing.Point(12, 199);
             this.expensebtn.Name = "expensebtn";
-            this.expensebtn.Size = new System.Drawing.Size(146, 28);
+            this.expensebtn.Size = new System.Drawing.Size(146, 33);
             this.expensebtn.TabIndex = 2;
             this.expensebtn.Text = "     Expense Type";
             this.expensebtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -157,6 +162,7 @@
             // 
             // sizebtn
             // 
+            this.sizebtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.sizebtn.FlatAppearance.BorderSize = 0;
             this.sizebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sizebtn.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -165,7 +171,7 @@
             this.sizebtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.sizebtn.Location = new System.Drawing.Point(12, 9);
             this.sizebtn.Name = "sizebtn";
-            this.sizebtn.Size = new System.Drawing.Size(146, 28);
+            this.sizebtn.Size = new System.Drawing.Size(146, 33);
             this.sizebtn.TabIndex = 0;
             this.sizebtn.Text = "     Size";
             this.sizebtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -179,16 +185,16 @@
             // Container
             // 
             this.Container.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Container.Location = new System.Drawing.Point(163, 0);
+            this.Container.Location = new System.Drawing.Point(150, 0);
             this.Container.Name = "Container";
-            this.Container.Size = new System.Drawing.Size(807, 514);
+            this.Container.Size = new System.Drawing.Size(820, 514);
             this.Container.TabIndex = 2;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.SaddleBrown;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(163, 0);
+            this.panel2.Location = new System.Drawing.Point(150, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1, 514);
             this.panel2.TabIndex = 3;

@@ -87,17 +87,17 @@
     <Compile Include="AddExpenseForm.Designer.cs">
       <DependentUpon>AddExpenseForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddPurchase.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddPurchase.Designer.cs">
-      <DependentUpon>AddPurchase.cs</DependentUpon>
-    </Compile>
     <Compile Include="AddSupplier.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AddSupplier.Designer.cs">
       <DependentUpon>AddSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddSupplierPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddSupplierPayment.Designer.cs">
+      <DependentUpon>AddSupplierPayment.cs</DependentUpon>
     </Compile>
     <Compile Include="ExpencesForm.cs">
       <SubType>Form</SubType>
@@ -117,11 +117,17 @@
     <Compile Include="CompanyForm.Designer.cs">
       <DependentUpon>CompanyForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Purchasing.cs">
+    <Compile Include="PurchaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Purchasing.Designer.cs">
-      <DependentUpon>Purchasing.cs</DependentUpon>
+    <Compile Include="PurchaseForm.Designer.cs">
+      <DependentUpon>PurchaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShoppingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShoppingForm.Designer.cs">
+      <DependentUpon>ShoppingForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UpdateExpense.cs">
       <SubType>Form</SubType>
@@ -220,14 +226,15 @@
     <Compile Include="UpdateSupplier.Designer.cs">
       <DependentUpon>UpdateSupplier.cs</DependentUpon>
     </Compile>
+    <Compile Include="Validator.cs" />
     <EmbeddedResource Include="AddExpenseForm.resx">
       <DependentUpon>AddExpenseForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddPurchase.resx">
-      <DependentUpon>AddPurchase.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="AddSupplier.resx">
       <DependentUpon>AddSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddSupplierPayment.resx">
+      <DependentUpon>AddSupplierPayment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ExpencesForm.resx">
       <DependentUpon>ExpencesForm.cs</DependentUpon>
@@ -238,8 +245,11 @@
     <EmbeddedResource Include="CompanyForm.resx">
       <DependentUpon>CompanyForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Purchasing.resx">
-      <DependentUpon>Purchasing.cs</DependentUpon>
+    <EmbeddedResource Include="PurchaseForm.resx">
+      <DependentUpon>PurchaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShoppingForm.resx">
+      <DependentUpon>ShoppingForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateExpense.resx">
       <DependentUpon>UpdateExpense.cs</DependentUpon>
@@ -367,6 +377,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Home-241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loader.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loader3.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Crop Square-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Maximize-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minimize-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minus-24.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

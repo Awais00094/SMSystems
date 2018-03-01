@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SupplierForm));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.Searchtxt = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -36,6 +38,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.bunifuCards3 = new Bunifu.Framework.UI.BunifuCards();
+            this.AddSupplierPayment = new System.Windows.Forms.Button();
             this.Addbtn = new System.Windows.Forms.Button();
             this.updatebtn = new System.Windows.Forms.Button();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -96,13 +99,12 @@
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.bunifuCards3);
-            this.panel1.Location = new System.Drawing.Point(623, 0);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel1.Location = new System.Drawing.Point(623, 54);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(290, 780);
+            this.panel1.Size = new System.Drawing.Size(290, 726);
             this.panel1.TabIndex = 15;
             // 
             // panel3
@@ -111,7 +113,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1, 780);
+            this.panel3.Size = new System.Drawing.Size(1, 726);
             this.panel3.TabIndex = 33;
             // 
             // bunifuCards3
@@ -120,6 +122,7 @@
             this.bunifuCards3.BorderRadius = 5;
             this.bunifuCards3.BottomSahddow = true;
             this.bunifuCards3.color = System.Drawing.Color.SaddleBrown;
+            this.bunifuCards3.Controls.Add(this.AddSupplierPayment);
             this.bunifuCards3.Controls.Add(this.Addbtn);
             this.bunifuCards3.Controls.Add(this.updatebtn);
             this.bunifuCards3.Controls.Add(this.bunifuCustomLabel2);
@@ -129,8 +132,25 @@
             this.bunifuCards3.Name = "bunifuCards3";
             this.bunifuCards3.RightSahddow = true;
             this.bunifuCards3.ShadowDepth = 20;
-            this.bunifuCards3.Size = new System.Drawing.Size(243, 159);
+            this.bunifuCards3.Size = new System.Drawing.Size(243, 204);
             this.bunifuCards3.TabIndex = 32;
+            // 
+            // AddSupplierPayment
+            // 
+            this.AddSupplierPayment.FlatAppearance.BorderSize = 0;
+            this.AddSupplierPayment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddSupplierPayment.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddSupplierPayment.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.AddSupplierPayment.Image = ((System.Drawing.Image)(resources.GetObject("AddSupplierPayment.Image")));
+            this.AddSupplierPayment.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AddSupplierPayment.Location = new System.Drawing.Point(43, 53);
+            this.AddSupplierPayment.Name = "AddSupplierPayment";
+            this.AddSupplierPayment.Size = new System.Drawing.Size(156, 32);
+            this.AddSupplierPayment.TabIndex = 47;
+            this.AddSupplierPayment.Text = "     Add Payments";
+            this.AddSupplierPayment.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.AddSupplierPayment.UseVisualStyleBackColor = true;
+            this.AddSupplierPayment.Click += new System.EventHandler(this.AddSupplierPayment_Click);
             // 
             // Addbtn
             // 
@@ -140,11 +160,11 @@
             this.Addbtn.ForeColor = System.Drawing.Color.SaddleBrown;
             this.Addbtn.Image = ((System.Drawing.Image)(resources.GetObject("Addbtn.Image")));
             this.Addbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Addbtn.Location = new System.Drawing.Point(59, 33);
+            this.Addbtn.Location = new System.Drawing.Point(43, 91);
             this.Addbtn.Name = "Addbtn";
-            this.Addbtn.Size = new System.Drawing.Size(144, 28);
+            this.Addbtn.Size = new System.Drawing.Size(156, 32);
             this.Addbtn.TabIndex = 46;
-            this.Addbtn.Text = "    Insert";
+            this.Addbtn.Text = "     Insert";
             this.Addbtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Addbtn.UseVisualStyleBackColor = true;
             this.Addbtn.Click += new System.EventHandler(this.Addbtn_Click);
@@ -157,9 +177,9 @@
             this.updatebtn.ForeColor = System.Drawing.Color.SaddleBrown;
             this.updatebtn.Image = ((System.Drawing.Image)(resources.GetObject("updatebtn.Image")));
             this.updatebtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.updatebtn.Location = new System.Drawing.Point(55, 68);
+            this.updatebtn.Location = new System.Drawing.Point(43, 130);
             this.updatebtn.Name = "updatebtn";
-            this.updatebtn.Size = new System.Drawing.Size(148, 30);
+            this.updatebtn.Size = new System.Drawing.Size(156, 30);
             this.updatebtn.TabIndex = 31;
             this.updatebtn.Text = "     Update";
             this.updatebtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -186,9 +206,9 @@
             this.Deletebtn.ForeColor = System.Drawing.Color.SaddleBrown;
             this.Deletebtn.Image = ((System.Drawing.Image)(resources.GetObject("Deletebtn.Image")));
             this.Deletebtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Deletebtn.Location = new System.Drawing.Point(55, 103);
+            this.Deletebtn.Location = new System.Drawing.Point(43, 165);
             this.Deletebtn.Name = "Deletebtn";
-            this.Deletebtn.Size = new System.Drawing.Size(148, 28);
+            this.Deletebtn.Size = new System.Drawing.Size(156, 28);
             this.Deletebtn.TabIndex = 13;
             this.Deletebtn.Text = "     Delete";
             this.Deletebtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -198,11 +218,28 @@
             // 
             this.SupplierGridView.BackgroundColor = System.Drawing.SystemColors.Control;
             this.SupplierGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.SupplierGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.SaddleBrown;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Chocolate;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.SupplierGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.SupplierGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.SupplierGridView.Dock = System.Windows.Forms.DockStyle.Left;
+            this.SupplierGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SupplierGridView.Location = new System.Drawing.Point(0, 54);
             this.SupplierGridView.Name = "SupplierGridView";
-            this.SupplierGridView.Size = new System.Drawing.Size(617, 726);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Chocolate;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SaddleBrown;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.SupplierGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.SupplierGridView.Size = new System.Drawing.Size(623, 726);
             this.SupplierGridView.TabIndex = 16;
             this.SupplierGridView.SelectionChanged += new System.EventHandler(this.SupplierGridView_SelectionChanged);
             // 
@@ -241,5 +278,6 @@
         private System.Windows.Forms.DataGridView SupplierGridView;
         private System.Windows.Forms.Button updatebtn;
         private System.Windows.Forms.Button Addbtn;
+        private System.Windows.Forms.Button AddSupplierPayment;
     }
 }

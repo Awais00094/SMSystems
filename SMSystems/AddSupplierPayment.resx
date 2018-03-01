@@ -118,27 +118,18 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="updatePurchasebtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="Close.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAFtJREFUSEvt
         kNsJACAMA7uDMzmdQ+tPfCBVaqkg2IP7EBIDJcexI8WQT0RNDvfJTtR+gjvDTtRaD881Y1kiavIBLe8M
         1OBKxMSnRLzDhUYR0w9oMf9wxgec2xAVtdq8Sa4oH5kAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="AddPurchasebtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="Addbtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAFtJREFUSEvt
         kNsJACAMA7uDMzmdQ+tPfCBVaqkg2IP7EBIDJcexI8WQT0RNDvfJTtR+gjvDTtRaD881Y1kiavIBLe8M
         1OBKxMSnRLzDhUYR0w9oMf9wxgec2xAVtdq8Sa4oH5kAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="deletePurchasebtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAKxJREFUSEvt
-        lbEJgDAURDNC0IUsdC6tTeForuAmmsgJCud5YGPhg9ck/05ikYSf10xNjGNXzamr17NlrexhzCe1sUlt
-        1R+y8sN97zRbsqi5Jw8OrMwyZ1HzAfaTXI6vRcyH/gIhYj6sRImYDytRIubDSpSI+bASJWI+rESJmA8r
-        USLmw0qUiPmwEiViPqxEiZgPK1Ei5pPvl4UVUfMsYj54F54/Umacd+CHE8IG8F93TWgDurAAAAAASUVO
-        RK5CYII=
 </value>
   </data>
 </root>

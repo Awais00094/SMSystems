@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="SMSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="SMSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="CategoriesFor">
           <Key>
             <PropertyRef Name="ID" />
@@ -105,7 +105,7 @@
           </Key>
           <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="ProductID" Type="bigint" />
-          <Property Name="Quantity" Type="bigint" />
+          <Property Name="Quantity" Type="int" />
           <Property Name="dtDate" Type="datetime" />
         </EntityType>
         <EntityType Name="Purchase">
@@ -113,14 +113,30 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="ProductID" Type="bigint" />
           <Property Name="SupplierID" Type="bigint" />
+          <Property Name="dtDate" Type="datetime" />
+          <Property Name="PurchaseInvoiceNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="TotalPairsQuantity" Type="int" />
+          <Property Name="TotalPurchaseValue" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="TotalDiscountValue" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="NetTotalValue" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="UserID" Type="bigint" />
+          <Property Name="StatusID" Type="bigint" />
+          <Property Name="PurchaseDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="PurchaseDetail">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProductID" Type="bigint" />
           <Property Name="TotalPairs" Type="int" />
-          <Property Name="PairPrice" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="WSalePairPrice" Type="decimal" Precision="18" Scale="2" />
           <Property Name="TotalPurchasePrice" Type="decimal" Precision="18" Scale="2" />
           <Property Name="dtDate" Type="datetime" />
           <Property Name="UserID" Type="bigint" />
           <Property Name="StatusID" Type="bigint" />
+          <Property Name="PurchaseID" Type="bigint" />
         </EntityType>
         <EntityType Name="PurchasePayment">
           <Key>
@@ -395,25 +411,13 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_ProductStock_Products">
-          <End Role="Products" Type="Self.Products" Multiplicity="1" />
-          <End Role="ProductStock" Type="Self.ProductStock" Multiplicity="0..1" />
+          <End Role="Products" Type="Self.Products" Multiplicity="0..1" />
+          <End Role="ProductStock" Type="Self.ProductStock" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Products">
               <PropertyRef Name="ID" />
             </Principal>
             <Dependent Role="ProductStock">
-              <PropertyRef Name="ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Purchase_Products">
-          <End Role="Products" Type="Self.Products" Multiplicity="0..1" />
-          <End Role="Purchase" Type="Self.Purchase" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Products">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="Purchase">
               <PropertyRef Name="ProductID" />
             </Dependent>
           </ReferentialConstraint>
@@ -454,15 +458,51 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_PurchasePayment_PurchasePayment">
+        <Association Name="FK_PurchaseDetail_Products">
+          <End Role="Products" Type="Self.Products" Multiplicity="0..1" />
+          <End Role="PurchaseDetail" Type="Self.PurchaseDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Products">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PurchaseDetail">
+              <PropertyRef Name="ProductID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PurchaseDetail_Purchase">
           <End Role="Purchase" Type="Self.Purchase" Multiplicity="0..1" />
-          <End Role="PurchasePayment" Type="Self.PurchasePayment" Multiplicity="*" />
+          <End Role="PurchaseDetail" Type="Self.PurchaseDetail" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Purchase">
               <PropertyRef Name="ID" />
             </Principal>
-            <Dependent Role="PurchasePayment">
+            <Dependent Role="PurchaseDetail">
               <PropertyRef Name="PurchaseID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PurchaseDetail_Status">
+          <End Role="Status" Type="Self.Status" Multiplicity="0..1" />
+          <End Role="PurchaseDetail" Type="Self.PurchaseDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Status">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PurchaseDetail">
+              <PropertyRef Name="StatusID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PurchaseDetail_User">
+          <End Role="User" Type="Self.User" Multiplicity="0..1" />
+          <End Role="PurchaseDetail" Type="Self.PurchaseDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PurchaseDetail">
+              <PropertyRef Name="UserID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -730,6 +770,7 @@
           <EntitySet Name="Products" EntityType="Self.Products" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ProductStock" EntityType="Self.ProductStock" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Purchase" EntityType="Self.Purchase" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PurchaseDetail" EntityType="Self.PurchaseDetail" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PurchasePayment" EntityType="Self.PurchasePayment" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Role" EntityType="Self.Role" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Shopping" EntityType="Self.Shopping" Schema="dbo" store:Type="Tables" />
@@ -790,10 +831,6 @@
             <End Role="Products" EntitySet="Products" />
             <End Role="ProductStock" EntitySet="ProductStock" />
           </AssociationSet>
-          <AssociationSet Name="FK_Purchase_Products" Association="Self.FK_Purchase_Products">
-            <End Role="Products" EntitySet="Products" />
-            <End Role="Purchase" EntitySet="Purchase" />
-          </AssociationSet>
           <AssociationSet Name="FK_Purchase_Status" Association="Self.FK_Purchase_Status">
             <End Role="Status" EntitySet="Status" />
             <End Role="Purchase" EntitySet="Purchase" />
@@ -806,9 +843,21 @@
             <End Role="User" EntitySet="User" />
             <End Role="Purchase" EntitySet="Purchase" />
           </AssociationSet>
-          <AssociationSet Name="FK_PurchasePayment_PurchasePayment" Association="Self.FK_PurchasePayment_PurchasePayment">
+          <AssociationSet Name="FK_PurchaseDetail_Products" Association="Self.FK_PurchaseDetail_Products">
+            <End Role="Products" EntitySet="Products" />
+            <End Role="PurchaseDetail" EntitySet="PurchaseDetail" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PurchaseDetail_Purchase" Association="Self.FK_PurchaseDetail_Purchase">
             <End Role="Purchase" EntitySet="Purchase" />
-            <End Role="PurchasePayment" EntitySet="PurchasePayment" />
+            <End Role="PurchaseDetail" EntitySet="PurchaseDetail" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PurchaseDetail_Status" Association="Self.FK_PurchaseDetail_Status">
+            <End Role="Status" EntitySet="Status" />
+            <End Role="PurchaseDetail" EntitySet="PurchaseDetail" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PurchaseDetail_User" Association="Self.FK_PurchaseDetail_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="PurchaseDetail" EntitySet="PurchaseDetail" />
           </AssociationSet>
           <AssociationSet Name="FK_Shopping_Shopping" Association="Self.FK_Shopping_Shopping">
             <End Role="Shopping" EntitySet="Shopping" />
@@ -895,7 +944,8 @@
             <End Role="User" EntitySet="User" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="SMSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -959,11 +1009,11 @@
           <Property Name="dtDate" Type="DateTime" Precision="3" />
           <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="UserID" Type="Int64" />
+          <Property Name="StatusID" Type="Int64" />
           <NavigationProperty Name="ExpenseType" Relationship="Self.FK_Expenses_ExpenseType" FromRole="Expenses" ToRole="ExpenseType" />
+          <NavigationProperty Name="Status" Relationship="Self.FK_Expenses_Status" FromRole="Expenses" ToRole="Status" />
           <NavigationProperty Name="User" Relationship="Self.FK_Expenses_User" FromRole="Expenses" ToRole="User" />
           <NavigationProperty Name="Transactions" Relationship="Self.FK_Transactions_Expenses" FromRole="Expenses" ToRole="Transactions" />
-          <Property Name="StatusID" Type="Int64" />
-          <NavigationProperty Name="Status" Relationship="SMSModel.FK_Expenses_Status" FromRole="Expens" ToRole="Status" />
         </EntityType>
         <EntityType Name="ExpenseType">
           <Key>
@@ -1011,8 +1061,8 @@
           <NavigationProperty Name="Size" Relationship="Self.FK_Products_Sizes" FromRole="Products" ToRole="Sizes" />
           <NavigationProperty Name="Status" Relationship="Self.FK_Products_Status" FromRole="Products" ToRole="Status" />
           <NavigationProperty Name="User" Relationship="Self.FK_Products_User" FromRole="Products" ToRole="User" />
-          <NavigationProperty Name="ProductStock" Relationship="Self.FK_ProductStock_Products" FromRole="Products" ToRole="ProductStock" />
-          <NavigationProperty Name="Purchases" Relationship="Self.FK_Purchase_Products" FromRole="Products" ToRole="Purchase" />
+          <NavigationProperty Name="ProductStocks" Relationship="Self.FK_ProductStock_Products" FromRole="Products" ToRole="ProductStock" />
+          <NavigationProperty Name="PurchaseDetails" Relationship="Self.FK_PurchaseDetail_Products" FromRole="Products" ToRole="PurchaseDetail" />
           <NavigationProperty Name="ShoppingDetails" Relationship="Self.FK_ShoppingDetail_Products" FromRole="Products" ToRole="ShoppingDetail" />
         </EntityType>
         <EntityType Name="ProductStock">
@@ -1021,7 +1071,7 @@
           </Key>
           <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="ProductID" Type="Int64" />
-          <Property Name="Quantity" Type="Int64" />
+          <Property Name="Quantity" Type="Int32" />
           <Property Name="dtDate" Type="DateTime" Precision="3" />
           <NavigationProperty Name="Product" Relationship="Self.FK_ProductStock_Products" FromRole="ProductStock" ToRole="Products" />
         </EntityType>
@@ -1030,19 +1080,38 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="ProductID" Type="Int64" />
           <Property Name="SupplierID" Type="Int64" />
+          <Property Name="dtDate" Type="DateTime" Precision="3" />
+          <Property Name="PurchaseInvoiceNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TotalPairsQuantity" Type="Int32" />
+          <Property Name="TotalPurchaseValue" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="TotalDiscountValue" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="NetTotalValue" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="UserID" Type="Int64" />
+          <Property Name="StatusID" Type="Int64" />
+          <Property Name="PurchaseDate" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Status" Relationship="Self.FK_Purchase_Status" FromRole="Purchase" ToRole="Status" />
+          <NavigationProperty Name="Supplier" Relationship="Self.FK_Purchase_Suppliers" FromRole="Purchase" ToRole="Suppliers" />
+          <NavigationProperty Name="User" Relationship="Self.FK_Purchase_User" FromRole="Purchase" ToRole="User" />
+          <NavigationProperty Name="PurchaseDetails" Relationship="Self.FK_PurchaseDetail_Purchase" FromRole="Purchase" ToRole="PurchaseDetail" />
+        </EntityType>
+        <EntityType Name="PurchaseDetail">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProductID" Type="Int64" />
           <Property Name="TotalPairs" Type="Int32" />
-          <Property Name="PairPrice" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="WSalePairPrice" Type="Decimal" Precision="18" Scale="2" />
           <Property Name="TotalPurchasePrice" Type="Decimal" Precision="18" Scale="2" />
           <Property Name="dtDate" Type="DateTime" Precision="3" />
           <Property Name="UserID" Type="Int64" />
           <Property Name="StatusID" Type="Int64" />
-          <NavigationProperty Name="Product" Relationship="Self.FK_Purchase_Products" FromRole="Purchase" ToRole="Products" />
-          <NavigationProperty Name="Status" Relationship="Self.FK_Purchase_Status" FromRole="Purchase" ToRole="Status" />
-          <NavigationProperty Name="Supplier" Relationship="Self.FK_Purchase_Suppliers" FromRole="Purchase" ToRole="Suppliers" />
-          <NavigationProperty Name="User" Relationship="Self.FK_Purchase_User" FromRole="Purchase" ToRole="User" />
-          <NavigationProperty Name="PurchasePayments" Relationship="Self.FK_PurchasePayment_PurchasePayment" FromRole="Purchase" ToRole="PurchasePayment" />
+          <Property Name="PurchaseID" Type="Int64" />
+          <NavigationProperty Name="Product" Relationship="Self.FK_PurchaseDetail_Products" FromRole="PurchaseDetail" ToRole="Products" />
+          <NavigationProperty Name="Purchase" Relationship="Self.FK_PurchaseDetail_Purchase" FromRole="PurchaseDetail" ToRole="Purchase" />
+          <NavigationProperty Name="Status" Relationship="Self.FK_PurchaseDetail_Status" FromRole="PurchaseDetail" ToRole="Status" />
+          <NavigationProperty Name="User" Relationship="Self.FK_PurchaseDetail_User" FromRole="PurchaseDetail" ToRole="User" />
         </EntityType>
         <EntityType Name="PurchasePayment">
           <Key>
@@ -1056,7 +1125,6 @@
           <Property Name="SupplierID" Type="Int64" />
           <Property Name="dtDate" Type="DateTime" Precision="3" />
           <Property Name="UserID" Type="Int64" />
-          <NavigationProperty Name="Purchase" Relationship="Self.FK_PurchasePayment_PurchasePayment" FromRole="PurchasePayment" ToRole="Purchase" />
           <NavigationProperty Name="Transactions" Relationship="Self.FK_Transactions_PurchasePayment" FromRole="PurchasePayment" ToRole="Transactions" />
         </EntityType>
         <EntityType Name="Role">
@@ -1148,14 +1216,15 @@
           <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
           <Property Name="Description" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Expenses" Relationship="Self.FK_Expenses_Status" FromRole="Status" ToRole="Expenses" />
           <NavigationProperty Name="Products" Relationship="Self.FK_Products_Status" FromRole="Status" ToRole="Products" />
           <NavigationProperty Name="Purchases" Relationship="Self.FK_Purchase_Status" FromRole="Status" ToRole="Purchase" />
+          <NavigationProperty Name="PurchaseDetails" Relationship="Self.FK_PurchaseDetail_Status" FromRole="Status" ToRole="PurchaseDetail" />
           <NavigationProperty Name="Shoppings" Relationship="Self.FK_Shopping_Status" FromRole="Status" ToRole="Shopping" />
           <NavigationProperty Name="ShoppingDetails" Relationship="Self.FK_ShoppingDetail_Status" FromRole="Status" ToRole="ShoppingDetail" />
           <NavigationProperty Name="ShoppingInvoices" Relationship="Self.FK_ShoppingInvoice_Status" FromRole="Status" ToRole="ShoppingInvoice" />
           <NavigationProperty Name="Suppliers" Relationship="Self.FK_Suppliers_Status" FromRole="Status" ToRole="Suppliers" />
           <NavigationProperty Name="Transactions" Relationship="Self.FK_Transactions_Status" FromRole="Status" ToRole="Transactions" />
-          <NavigationProperty Name="Expenses" Relationship="SMSModel.FK_Expenses_Status" FromRole="Status" ToRole="Expens" />
         </EntityType>
         <EntityType Name="SupplierDetail">
           <Key>
@@ -1225,6 +1294,7 @@
           <NavigationProperty Name="Expenses" Relationship="Self.FK_Expenses_User" FromRole="User" ToRole="Expenses" />
           <NavigationProperty Name="Products" Relationship="Self.FK_Products_User" FromRole="User" ToRole="Products" />
           <NavigationProperty Name="Purchases" Relationship="Self.FK_Purchase_User" FromRole="User" ToRole="Purchase" />
+          <NavigationProperty Name="PurchaseDetails" Relationship="Self.FK_PurchaseDetail_User" FromRole="User" ToRole="PurchaseDetail" />
           <NavigationProperty Name="Role" Relationship="Self.FK_User_Role" FromRole="User" ToRole="Role" />
           <NavigationProperty Name="Shoppings" Relationship="Self.FK_Shopping_User" FromRole="User" ToRole="Shopping" />
           <NavigationProperty Name="ShoppingDetails" Relationship="Self.FK_ShoppingDetail_User" FromRole="User" ToRole="ShoppingDetail" />
@@ -1316,6 +1386,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Expenses_Status">
+          <End Role="Status" Type="Self.Status" Multiplicity="0..1" />
+          <End Role="Expenses" Type="Self.Expens" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Status">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Expenses">
+              <PropertyRef Name="StatusID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Expenses_User">
           <End Role="User" Type="Self.User" Multiplicity="0..1" />
           <End Role="Expenses" Type="Self.Expens" Multiplicity="*" />
@@ -1389,25 +1471,25 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_ProductStock_Products">
-          <End Role="Products" Type="Self.Product" Multiplicity="1" />
-          <End Role="ProductStock" Type="Self.ProductStock" Multiplicity="0..1" />
+          <End Role="Products" Type="Self.Product" Multiplicity="0..1" />
+          <End Role="ProductStock" Type="Self.ProductStock" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Products">
               <PropertyRef Name="ID" />
             </Principal>
             <Dependent Role="ProductStock">
-              <PropertyRef Name="ID" />
+              <PropertyRef Name="ProductID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Purchase_Products">
+        <Association Name="FK_PurchaseDetail_Products">
           <End Role="Products" Type="Self.Product" Multiplicity="0..1" />
-          <End Role="Purchase" Type="Self.Purchase" Multiplicity="*" />
+          <End Role="PurchaseDetail" Type="Self.PurchaseDetail" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Products">
               <PropertyRef Name="ID" />
             </Principal>
-            <Dependent Role="Purchase">
+            <Dependent Role="PurchaseDetail">
               <PropertyRef Name="ProductID" />
             </Dependent>
           </ReferentialConstraint>
@@ -1460,15 +1542,39 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_PurchasePayment_PurchasePayment">
+        <Association Name="FK_PurchaseDetail_Purchase">
           <End Role="Purchase" Type="Self.Purchase" Multiplicity="0..1" />
-          <End Role="PurchasePayment" Type="Self.PurchasePayment" Multiplicity="*" />
+          <End Role="PurchaseDetail" Type="Self.PurchaseDetail" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Purchase">
               <PropertyRef Name="ID" />
             </Principal>
-            <Dependent Role="PurchasePayment">
+            <Dependent Role="PurchaseDetail">
               <PropertyRef Name="PurchaseID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PurchaseDetail_Status">
+          <End Role="Status" Type="Self.Status" Multiplicity="0..1" />
+          <End Role="PurchaseDetail" Type="Self.PurchaseDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Status">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PurchaseDetail">
+              <PropertyRef Name="StatusID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PurchaseDetail_User">
+          <End Role="User" Type="Self.User" Multiplicity="0..1" />
+          <End Role="PurchaseDetail" Type="Self.PurchaseDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PurchaseDetail">
+              <PropertyRef Name="UserID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1688,6 +1794,7 @@
           <EntitySet Name="Products" EntityType="Self.Product" />
           <EntitySet Name="ProductStocks" EntityType="Self.ProductStock" />
           <EntitySet Name="Purchases" EntityType="Self.Purchase" />
+          <EntitySet Name="PurchaseDetails" EntityType="Self.PurchaseDetail" />
           <EntitySet Name="PurchasePayments" EntityType="Self.PurchasePayment" />
           <EntitySet Name="Roles" EntityType="Self.Role" />
           <EntitySet Name="Shoppings" EntityType="Self.Shopping" />
@@ -1728,6 +1835,10 @@
             <End Role="ExpenseType" EntitySet="ExpenseTypes" />
             <End Role="Expenses" EntitySet="Expenses" />
           </AssociationSet>
+          <AssociationSet Name="FK_Expenses_Status" Association="Self.FK_Expenses_Status">
+            <End Role="Status" EntitySet="Status" />
+            <End Role="Expenses" EntitySet="Expenses" />
+          </AssociationSet>
           <AssociationSet Name="FK_Expenses_User" Association="Self.FK_Expenses_User">
             <End Role="User" EntitySet="Users" />
             <End Role="Expenses" EntitySet="Expenses" />
@@ -1756,9 +1867,9 @@
             <End Role="Products" EntitySet="Products" />
             <End Role="ProductStock" EntitySet="ProductStocks" />
           </AssociationSet>
-          <AssociationSet Name="FK_Purchase_Products" Association="Self.FK_Purchase_Products">
+          <AssociationSet Name="FK_PurchaseDetail_Products" Association="Self.FK_PurchaseDetail_Products">
             <End Role="Products" EntitySet="Products" />
-            <End Role="Purchase" EntitySet="Purchases" />
+            <End Role="PurchaseDetail" EntitySet="PurchaseDetails" />
           </AssociationSet>
           <AssociationSet Name="FK_ShoppingDetail_Products" Association="Self.FK_ShoppingDetail_Products">
             <End Role="Products" EntitySet="Products" />
@@ -1776,9 +1887,17 @@
             <End Role="User" EntitySet="Users" />
             <End Role="Purchase" EntitySet="Purchases" />
           </AssociationSet>
-          <AssociationSet Name="FK_PurchasePayment_PurchasePayment" Association="Self.FK_PurchasePayment_PurchasePayment">
+          <AssociationSet Name="FK_PurchaseDetail_Purchase" Association="Self.FK_PurchaseDetail_Purchase">
             <End Role="Purchase" EntitySet="Purchases" />
-            <End Role="PurchasePayment" EntitySet="PurchasePayments" />
+            <End Role="PurchaseDetail" EntitySet="PurchaseDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PurchaseDetail_Status" Association="Self.FK_PurchaseDetail_Status">
+            <End Role="Status" EntitySet="Status" />
+            <End Role="PurchaseDetail" EntitySet="PurchaseDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PurchaseDetail_User" Association="Self.FK_PurchaseDetail_User">
+            <End Role="User" EntitySet="Users" />
+            <End Role="PurchaseDetail" EntitySet="PurchaseDetails" />
           </AssociationSet>
           <AssociationSet Name="FK_Transactions_PurchasePayment" Association="Self.FK_Transactions_PurchasePayment">
             <End Role="PurchasePayment" EntitySet="PurchasePayments" />
@@ -1848,23 +1967,7 @@
             <End Role="User" EntitySet="Users" />
             <End Role="Transactions" EntitySet="Transactions" />
           </AssociationSet>
-          <AssociationSet Name="FK_Expenses_Status" Association="SMSModel.FK_Expenses_Status">
-            <End Role="Status" EntitySet="Status" />
-            <End Role="Expens" EntitySet="Expenses" />
-          </AssociationSet>
         </EntityContainer>
-        <Association Name="FK_Expenses_Status">
-          <End Type="SMSModel.Status" Role="Status" Multiplicity="0..1" />
-          <End Type="SMSModel.Expens" Role="Expens" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Status">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="Expens">
-              <PropertyRef Name="StatusID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1923,13 +2026,13 @@
           <EntitySetMapping Name="Expenses">
             <EntityTypeMapping TypeName="SMSModel.Expens">
               <MappingFragment StoreEntitySet="Expenses">
-                <ScalarProperty Name="StatusID" ColumnName="StatusID" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="ExpenseTypeID" ColumnName="ExpenseTypeID" />
                 <ScalarProperty Name="Amount" ColumnName="Amount" />
                 <ScalarProperty Name="dtDate" ColumnName="dtDate" />
                 <ScalarProperty Name="Description" ColumnName="Description" />
                 <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="StatusID" ColumnName="StatusID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1988,14 +2091,31 @@
             <EntityTypeMapping TypeName="SMSModel.Purchase">
               <MappingFragment StoreEntitySet="Purchase">
                 <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
                 <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+                <ScalarProperty Name="dtDate" ColumnName="dtDate" />
+                <ScalarProperty Name="PurchaseInvoiceNo" ColumnName="PurchaseInvoiceNo" />
+                <ScalarProperty Name="TotalPairsQuantity" ColumnName="TotalPairsQuantity" />
+                <ScalarProperty Name="TotalPurchaseValue" ColumnName="TotalPurchaseValue" />
+                <ScalarProperty Name="TotalDiscountValue" ColumnName="TotalDiscountValue" />
+                <ScalarProperty Name="NetTotalValue" ColumnName="NetTotalValue" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+                <ScalarProperty Name="PurchaseDate" ColumnName="PurchaseDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PurchaseDetails">
+            <EntityTypeMapping TypeName="SMSModel.PurchaseDetail">
+              <MappingFragment StoreEntitySet="PurchaseDetail">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
                 <ScalarProperty Name="TotalPairs" ColumnName="TotalPairs" />
-                <ScalarProperty Name="PairPrice" ColumnName="PairPrice" />
+                <ScalarProperty Name="WSalePairPrice" ColumnName="WSalePairPrice" />
                 <ScalarProperty Name="TotalPurchasePrice" ColumnName="TotalPurchasePrice" />
                 <ScalarProperty Name="dtDate" ColumnName="dtDate" />
                 <ScalarProperty Name="UserID" ColumnName="UserID" />
                 <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+                <ScalarProperty Name="PurchaseID" ColumnName="PurchaseID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

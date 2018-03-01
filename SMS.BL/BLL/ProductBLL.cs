@@ -165,5 +165,13 @@ namespace SMS.BL.BLL
             p = db.Products.Where(x => x.ID == ID).FirstOrDefault();
             return p;
         }
+        public static Product GetProductByArticalNo(string ArticalNo)
+        {
+            SMSEntities db = new SMSEntities();
+            Product p = new Product();
+
+            p = db.Products.Where(x => x.ArticalNo ==ArticalNo ).FirstOrDefault();
+            return p;
+        }
     }
 }

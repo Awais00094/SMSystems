@@ -117,7 +117,7 @@ namespace SMS.BL.BLL
             //            Name = listObj.Name,
             //            Description = listObj.Description
             //        }).ToList();
-            
+
             list = db.CategoriesFors
                         .Where(x => x.IsDeleted == false)
                         .Select(x=> new CommonList

@@ -114,5 +114,15 @@ namespace SMSystems
             var SearchData = SearchList.Where(x => x.Name.StartsWith(text));
             this.SizeGridView.DataSource = SearchData;
         }
+
+        private void SizeGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void SizeForm_Load(object sender, EventArgs e)
+        {
+            SizeGridView.ClearSelection();
+        }
     }
 }
