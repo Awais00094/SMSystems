@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductFormDetail));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.colorbtn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.Searchtxt = new System.Windows.Forms.TextBox();
@@ -39,13 +41,13 @@
             this.updatebtn = new System.Windows.Forms.Button();
             this.Addbtn = new System.Windows.Forms.Button();
             this.deletebtn = new System.Windows.Forms.Button();
-            this.ProductGridView = new System.Windows.Forms.DataGridView();
             this.gridContainer = new System.Windows.Forms.Panel();
+            this.ProductGridView = new System.Windows.Forms.DataGridView();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.bunifuCards3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ProductGridView)).BeginInit();
             this.gridContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ProductGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // colorbtn
@@ -182,23 +184,6 @@
             this.deletebtn.UseVisualStyleBackColor = true;
             this.deletebtn.Click += new System.EventHandler(this.deletebtn_Click);
             // 
-            // ProductGridView
-            // 
-            this.ProductGridView.AllowUserToAddRows = false;
-            this.ProductGridView.AllowUserToDeleteRows = false;
-            this.ProductGridView.AllowUserToResizeColumns = false;
-            this.ProductGridView.AllowUserToResizeRows = false;
-            this.ProductGridView.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.ProductGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.ProductGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ProductGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ProductGridView.Location = new System.Drawing.Point(0, 0);
-            this.ProductGridView.Name = "ProductGridView";
-            this.ProductGridView.ReadOnly = true;
-            this.ProductGridView.Size = new System.Drawing.Size(568, 467);
-            this.ProductGridView.TabIndex = 17;
-            this.ProductGridView.SelectionChanged += new System.EventHandler(this.ProductGridView_SelectionChanged);
-            // 
             // gridContainer
             // 
             this.gridContainer.Controls.Add(this.ProductGridView);
@@ -207,6 +192,50 @@
             this.gridContainer.Name = "gridContainer";
             this.gridContainer.Size = new System.Drawing.Size(568, 467);
             this.gridContainer.TabIndex = 18;
+            // 
+            // ProductGridView
+            // 
+            this.ProductGridView.AllowUserToAddRows = false;
+            this.ProductGridView.AllowUserToDeleteRows = false;
+            this.ProductGridView.AllowUserToResizeColumns = false;
+            this.ProductGridView.AllowUserToResizeRows = false;
+            this.ProductGridView.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.ProductGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.SaddleBrown;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.SaddleBrown;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ProductGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.ProductGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ProductGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ProductGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.ProductGridView.EnableHeadersVisualStyles = false;
+            this.ProductGridView.GridColor = System.Drawing.Color.SaddleBrown;
+            this.ProductGridView.Location = new System.Drawing.Point(0, 0);
+            this.ProductGridView.MultiSelect = false;
+            this.ProductGridView.Name = "ProductGridView";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.SaddleBrown;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SaddleBrown;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ProductGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.ProductGridView.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.ProductGridView.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
+            this.ProductGridView.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Segoe UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProductGridView.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.ProductGridView.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.SaddleBrown;
+            this.ProductGridView.RowTemplate.DefaultCellStyle.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ProductGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.ProductGridView.Size = new System.Drawing.Size(568, 467);
+            this.ProductGridView.TabIndex = 34;
+            this.ProductGridView.VirtualMode = true;
+            this.ProductGridView.SelectionChanged += new System.EventHandler(this.ProductGridView_SelectionChanged);
             // 
             // ProductFormDetail
             // 
@@ -218,12 +247,13 @@
             this.Controls.Add(this.panel1);
             this.Name = "ProductFormDetail";
             this.Text = "ProductFormDetail";
+            this.Load += new System.EventHandler(this.ProductFormDetail_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.bunifuCards3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ProductGridView)).EndInit();
             this.gridContainer.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ProductGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -235,12 +265,12 @@
         private System.Windows.Forms.TextBox Searchtxt;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView ProductGridView;
         private System.Windows.Forms.Button updatebtn;
         private System.Windows.Forms.Button Addbtn;
         private Bunifu.Framework.UI.BunifuCards bunifuCards3;
         private System.Windows.Forms.Button deletebtn;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel gridContainer;
+        private System.Windows.Forms.DataGridView ProductGridView;
     }
 }

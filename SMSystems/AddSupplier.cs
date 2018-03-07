@@ -1,5 +1,5 @@
-﻿using SMS.BL.BLL;
-using SMS.BL.Entities;
+﻿using SMSBL.BLL;
+using SMSBL.Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -41,7 +41,7 @@ namespace SMSystems
                     model.Name = this.NametextBox.Text;
                     model.dtDate = this.SupplierDTPicker.Value;
                     model.IsActive = true;
-                    model.StatusID = Convert.ToInt64(SMS.BL.Enum.Status.Active);
+                    model.StatusID = Convert.ToInt64(SMSBL.Enum.Status.Active);
                     model.UserID = null;
                     ID = SupplierBLL.AddSupplier(model);
                     if (ID != -1)
@@ -92,7 +92,7 @@ namespace SMSystems
                     model.Name = this.NametextBox.Text;
                     model.dtDate = this.SupplierDTPicker.Value;
                     model.IsActive = true;
-                    model.StatusID = Convert.ToInt64(SMS.BL.Enum.Status.Active);
+                    model.StatusID = Convert.ToInt64(SMSBL.Enum.Status.Active);
                     model.UserID = null;
                     ID = SupplierBLL.AddSupplier(model);
                     if (ID != -1)

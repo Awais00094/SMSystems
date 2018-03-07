@@ -1,5 +1,5 @@
-﻿using SMS.BL.BLL;
-using SMS.BL.Entities;
+﻿using SMSBL.BLL;
+using SMSBL.Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -115,14 +115,19 @@ namespace SMSystems
             this.SizeGridView.DataSource = SearchData;
         }
 
-        private void SizeGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void SizeForm_Load(object sender, EventArgs e)
+        {
+            SizeGridView.ClearSelection();
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void SizeForm_Load(object sender, EventArgs e)
+        private void btnPrevious_Click(object sender, EventArgs e)
         {
-            SizeGridView.ClearSelection();
+
         }
     }
 }

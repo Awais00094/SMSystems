@@ -285,9 +285,9 @@ namespace SMSystems
                 this.WindowState = FormWindowState.Normal;
                 this.StartPosition = FormStartPosition.CenterParent;
                 this.Location = new Point((Screen.PrimaryScreen.WorkingArea.Width - this.Width) / 2,
-                          (Screen.PrimaryScreen.WorkingArea.Height - this.Height) / 2);
-
+                (Screen.PrimaryScreen.WorkingArea.Height - this.Height) / 2);
                 this.MinimizeMaximizeBtn.Image = SMSystems.Properties.Resources.Maximize_24;
+                this.MinimizeMaximizeBtn.BackColor = Color.SaddleBrown;
                 MaximizeForm = false;
             }
             else
@@ -295,6 +295,7 @@ namespace SMSystems
                 this.WindowState = FormWindowState.Maximized;
                 this.StartPosition = FormStartPosition.CenterScreen;
                 this.MinimizeMaximizeBtn.Image = SMSystems.Properties.Resources.Crop_Square_24;
+                this.MinimizeMaximizeBtn.BackColor = Color.SaddleBrown;
 
                 MaximizeForm = true;
             }

@@ -1,7 +1,7 @@
-﻿using SMS.BL;
-using SMS.BL.BLL;
-using SMS.BL.Entities;
-using SMS.BL.Enum;
+﻿using SMSBL;
+using SMSBL.BLL;
+using SMSBL.Entities;
+using SMSBL.Enum;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,20 +23,18 @@ namespace SMSystems
         decimal TotalShoppingValue = 0;
         decimal NetValue = 0;
         decimal TotalDiscountValue = 0;
+        int ProductStock = 0;
 
         public ShoppingForm()
         {
             InitializeComponent();
             SetDataForShoppingFeilds();
+            this.MinDiscount.Checked = true;
             this.ArticalNotxt.Text = "100-1";
             GetArticalNoDetails("100-1");
             //this.AddShoppingbtn.Enabled = false;
         }
-        public void DiscountComboBox()
-        {
-
-            //this.discountcombo.Ite
-        }
+       
         public void SetDataForShoppingFeilds()
         {
             this.CustomerNametxt.Text = "Walking Customer";
@@ -70,7 +68,7 @@ namespace SMSystems
             this.salepricetxt.Text = product.SalePrice.ToString();
             this.shoetypetxt.Text = product.ProductCategory.Name;
             this.CategoryFortxt.Text = product.CategoriesFor.Name;
-            int ProductStock = ReportBLL.GetProductStockByProductID(product.ID);
+            ProductStock = ReportBLL.GetProductStockByProductID(product.ID);
             this.TotalStock.Text = ProductStock + " Pairs";
         }
 
@@ -115,9 +113,9 @@ namespace SMSystems
         {
             if (productList.Count > 0)
             {
-                TotalShoppingValue = productList.Sum(x => x.RetailPrice);
+                TotalShoppingValue = productList.Sum(x => (x.Quantity * x.RetailPrice));
                 TotalQuantity = productList.Sum(x => x.Quantity);
-                TotalDiscountValue = productList.Sum(x => x.DiscountPrice);
+                TotalDiscountValue = productList.Sum(x => (x.Quantity*x.DiscountPrice));
                 NetValue = productList.Sum(x => x.NetPrice);
                 this.TShoppingValuetxt.Text = TotalShoppingValue.ToString();
                 this.TotalQuantitytxt.Text = TotalQuantity.ToString();
@@ -139,6 +137,10 @@ namespace SMSystems
             {
                 MessageBox.Show("Fill the Quantity!... ");
             }
+            else if(Convert.ToInt32(this.Quantitytxt.Text) > ProductStock)
+            {
+                MessageBox.Show("The Quantity You Enter is Not availible in Stock!... ");
+            }
             else
             {
                 if (product.ID != 0)
@@ -148,7 +150,7 @@ namespace SMSystems
                     {
                         item.Quantity += Convert.ToInt32(this.Quantitytxt.Text);
                         item.TotalPrice += (item.RetailPrice * item.Quantity);
-                        item.NetPrice += ((item.RetailPrice * item.Quantity) - (item.DiscountPrice * item.Quantity));     
+                        item.NetPrice += ((item.RetailPrice * item.Quantity) - (item.DiscountPrice * item.Quantity));
                     }
                     else
                     {
@@ -157,12 +159,12 @@ namespace SMSystems
                         item.ID = product.ID;
                         item.Quantity = Convert.ToInt32(this.Quantitytxt.Text);
                         item.RetailPrice = product.SalePrice.GetValueOrDefault();
-                        int DiscountType = 0;
-                        if (DiscountType == 0)
+                        //int DiscountType = 0;
+                        if (MinDiscount.Checked)
                         {
                             item.DiscountPrice = product.MinDiscount.Value;
                         }
-                        else if (DiscountType == 1)
+                        else if (MaxDiscount.Checked)
                         {
                             item.DiscountPrice = product.MaxDiscount.Value;
                         }
@@ -238,7 +240,7 @@ namespace SMSystems
                                                             );
                 if (Er == SMSError.SUCCESS)
                 {
-
+                    MessageBox.Show("Shopping Done Successfully with ID:" + ShoppingID);
                 }
                 else if (Er != SMSError.SUCCESS)
                 {
@@ -263,6 +265,26 @@ namespace SMSystems
         {
             string ArticalNo = this.ArticalNotxt.Text;
             GetArticalNoDetails(ArticalNo);
+        }
+
+        private void MaxDiscount_CheckedChanged(object sender, EventArgs e)
+        {
+            //this.MinDiscount.Checked = false;     
+        }
+
+        private void MinDiscount_CheckedChanged(object sender, EventArgs e)
+        {            
+            //this.MaxDiscount.Checked = false;      
+        }
+
+        private void MinDiscount_CheckStateChanged(object sender, EventArgs e)
+        {
+            this.MaxDiscount.Checked = false;
+        }
+
+        private void MaxDiscount_CheckStateChanged(object sender, EventArgs e)
+        {
+            this.MinDiscount.Checked = false;  
         }
     }
 }

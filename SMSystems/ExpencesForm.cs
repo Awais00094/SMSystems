@@ -1,5 +1,5 @@
-﻿using SMS.BL.BLL;
-using SMS.BL.Entities;
+﻿using SMSBL.BLL;
+using SMSBL.Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,6 +23,10 @@ namespace SMSystems
 
         }
 
+        private void ExpensesForm_Load(object sender, EventArgs e)
+        {
+            ExpensesGridView.ClearSelection();
+        }
         protected void ChangingFeildsVisibility(bool state)
         {
             //this.updateNametxt.Enabled = state;

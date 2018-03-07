@@ -1,13 +1,6 @@
-﻿using SMS.BL.BLL;
-using SMS.BL.Entities;
+﻿using SMSBL.BLL;
+using SMSBL.Entities;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SMSystems

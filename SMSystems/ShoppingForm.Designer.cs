@@ -29,14 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ShoppingForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuCards3 = new Bunifu.Framework.UI.BunifuCards();
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.SidePanel = new System.Windows.Forms.Panel();
             this.bunifuCards2 = new Bunifu.Framework.UI.BunifuCards();
-            this.label16 = new System.Windows.Forms.Label();
-            this.discountcombo = new System.Windows.Forms.ComboBox();
             this.TotalStock = new System.Windows.Forms.Label();
             this.AddProduct = new System.Windows.Forms.Button();
             this.SearchArticalBtn = new System.Windows.Forms.Button();
@@ -86,6 +84,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.ProdGridView = new System.Windows.Forms.DataGridView();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.MinDiscount = new System.Windows.Forms.CheckBox();
+            this.MaxDiscount = new System.Windows.Forms.CheckBox();
             this.bunifuCards3.SuspendLayout();
             this.SidePanel.SuspendLayout();
             this.bunifuCards2.SuspendLayout();
@@ -116,11 +116,11 @@
             // bunifuCustomLabel4
             // 
             this.bunifuCustomLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel4.ForeColor = System.Drawing.Color.Black;
-            this.bunifuCustomLabel4.Location = new System.Drawing.Point(60, 11);
+            this.bunifuCustomLabel4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel4.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.bunifuCustomLabel4.Location = new System.Drawing.Point(12, 9);
             this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
-            this.bunifuCustomLabel4.Size = new System.Drawing.Size(116, 21);
+            this.bunifuCustomLabel4.Size = new System.Drawing.Size(148, 21);
             this.bunifuCustomLabel4.TabIndex = 30;
             this.bunifuCustomLabel4.Text = "Shopping";
             this.bunifuCustomLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -142,8 +142,8 @@
             this.bunifuCards2.BorderRadius = 5;
             this.bunifuCards2.BottomSahddow = true;
             this.bunifuCards2.color = System.Drawing.Color.SaddleBrown;
-            this.bunifuCards2.Controls.Add(this.label16);
-            this.bunifuCards2.Controls.Add(this.discountcombo);
+            this.bunifuCards2.Controls.Add(this.MaxDiscount);
+            this.bunifuCards2.Controls.Add(this.MinDiscount);
             this.bunifuCards2.Controls.Add(this.TotalStock);
             this.bunifuCards2.Controls.Add(this.AddProduct);
             this.bunifuCards2.Controls.Add(this.SearchArticalBtn);
@@ -172,25 +172,6 @@
             this.bunifuCards2.ShadowDepth = 20;
             this.bunifuCards2.Size = new System.Drawing.Size(263, 345);
             this.bunifuCards2.TabIndex = 40;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.label16.Location = new System.Drawing.Point(7, 247);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(82, 15);
-            this.label16.TabIndex = 60;
-            this.label16.Text = "DiscountType";
-            // 
-            // discountcombo
-            // 
-            this.discountcombo.FormattingEnabled = true;
-            this.discountcombo.Location = new System.Drawing.Point(102, 245);
-            this.discountcombo.Name = "discountcombo";
-            this.discountcombo.Size = new System.Drawing.Size(107, 21);
-            this.discountcombo.TabIndex = 59;
             // 
             // TotalStock
             // 
@@ -307,7 +288,7 @@
             // 
             // Quantitytxt
             // 
-            this.Quantitytxt.Location = new System.Drawing.Point(102, 272);
+            this.Quantitytxt.Location = new System.Drawing.Point(102, 282);
             this.Quantitytxt.MaxLength = 2;
             this.Quantitytxt.Name = "Quantitytxt";
             this.Quantitytxt.Size = new System.Drawing.Size(107, 20);
@@ -318,7 +299,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.label11.Location = new System.Drawing.Point(6, 274);
+            this.label11.Location = new System.Drawing.Point(6, 284);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(55, 15);
             this.label11.TabIndex = 46;
@@ -742,14 +723,14 @@
             this.ProdGridView.AllowUserToDeleteRows = false;
             this.ProdGridView.BackgroundColor = System.Drawing.SystemColors.Control;
             this.ProdGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Chocolate;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.SaddleBrown;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ProdGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Chocolate;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.SaddleBrown;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ProdGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.ProdGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ProdGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ProdGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
@@ -757,14 +738,14 @@
             this.ProdGridView.GridColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ProdGridView.Location = new System.Drawing.Point(0, 34);
             this.ProdGridView.Name = "ProdGridView";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Chocolate;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.SaddleBrown;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ProdGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomCenter;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.Chocolate;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.SaddleBrown;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ProdGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.ProdGridView.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.ProdGridView.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.Chocolate;
             this.ProdGridView.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -787,6 +768,34 @@
             this.bunifuCustomLabel2.TabIndex = 32;
             this.bunifuCustomLabel2.Text = "Products";
             this.bunifuCustomLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // MinDiscount
+            // 
+            this.MinDiscount.AutoSize = true;
+            this.MinDiscount.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MinDiscount.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.MinDiscount.Location = new System.Drawing.Point(14, 249);
+            this.MinDiscount.Name = "MinDiscount";
+            this.MinDiscount.Size = new System.Drawing.Size(96, 17);
+            this.MinDiscount.TabIndex = 58;
+            this.MinDiscount.Text = "Min Discount";
+            this.MinDiscount.UseVisualStyleBackColor = true;
+            this.MinDiscount.CheckStateChanged += new System.EventHandler(this.MinDiscount_CheckStateChanged);
+            this.MinDiscount.Click += new System.EventHandler(this.MinDiscount_CheckedChanged);
+            // 
+            // MaxDiscount
+            // 
+            this.MaxDiscount.AutoSize = true;
+            this.MaxDiscount.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaxDiscount.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.MaxDiscount.Location = new System.Drawing.Point(138, 249);
+            this.MaxDiscount.Name = "MaxDiscount";
+            this.MaxDiscount.Size = new System.Drawing.Size(98, 17);
+            this.MaxDiscount.TabIndex = 59;
+            this.MaxDiscount.Text = "Max Discount";
+            this.MaxDiscount.UseVisualStyleBackColor = true;
+            this.MaxDiscount.CheckStateChanged += new System.EventHandler(this.MaxDiscount_CheckStateChanged);
+            this.MaxDiscount.Click += new System.EventHandler(this.MaxDiscount_CheckedChanged);
             // 
             // ShoppingForm
             // 
@@ -820,7 +829,6 @@
         #endregion
 
         private Bunifu.Framework.UI.BunifuCards bunifuCards3;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel4;
         private System.Windows.Forms.Panel SidePanel;
         private Bunifu.Framework.UI.BunifuCards bunifuCards1;
         private System.Windows.Forms.TextBox CustomerNumbertxt;
@@ -868,11 +876,12 @@
         private Bunifu.Framework.UI.BunifuCards bunifuCards5;
         private System.Windows.Forms.Button Deletebtn;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel5;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.ComboBox discountcombo;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
         private System.Windows.Forms.DataGridView ProdGridView;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel4;
+        private System.Windows.Forms.CheckBox MaxDiscount;
+        private System.Windows.Forms.CheckBox MinDiscount;
     }
 }

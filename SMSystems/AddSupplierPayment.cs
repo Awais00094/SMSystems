@@ -1,5 +1,5 @@
-﻿using SMS.BL.BLL;
-using SMS.BL.Entities;
+﻿using SMSBL.BLL;
+using SMSBL.Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,7 +23,7 @@ namespace SMSystems
         }
         void FillSupplierComboBox()
         {
-            var dt = PurchaseBLL.GetSupplierCombobox();
+            var dt = PurchaseBLL.GetSupplierComboboxForPayment();
             this.SupplierCombobox.DataSource=dt;
             this.SupplierCombobox.DisplayMember = "Name";
             this.SupplierCombobox.ValueMember = "ID";
@@ -64,25 +64,29 @@ namespace SMSystems
         {
             try
             {
-                long ID = -1;
-                SupplierPaymentModel model = new SupplierPaymentModel();
-
-                model.SupplierID = Convert.ToInt64(this.SupplierCombobox.SelectedValue);
-                model.RemainingAmount = Convert.ToDecimal(this.lblTotalRemainingAmount.Text);
-                model.dtDate = this.SupplierDTPicker.Value;
-                model.AmoutPay = Convert.ToDecimal(AmountPaytextBox.Text);
-                ID = SupplierBLL.AddSupplierPayment(model);
-                if (ID != -1)
+                if (Convert.ToDecimal(AmountPaytextBox.Text) > Convert.ToDecimal(this.lblTotalRemainingAmount.Text))
                 {
-                    MessageBox.Show("Supplier Payment Added Successfully !...");
-                    this.Close();
+                    MessageBox.Show("You cant pay that much Amount to this supplier !...");
                 }
                 else
                 {
-                    MessageBox.Show("Supplier Payment Failed !...");
+                    long ID = -1;
+                    SupplierPaymentModel model = new SupplierPaymentModel();
+                    model.SupplierID = Convert.ToInt64(this.SupplierCombobox.SelectedValue);
+                    model.RemainingAmount = Convert.ToDecimal(this.lblTotalRemainingAmount.Text);
+                    model.dtDate = this.SupplierDTPicker.Value;
+                    model.AmoutPay = Convert.ToDecimal(AmountPaytextBox.Text);
+                    ID = SupplierBLL.AddSupplierPayment(model);
+                    if (ID != -1)
+                    {
+                        MessageBox.Show("Supplier Payment Added Successfully !...");
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Supplier Payment Failed !...");
+                    }
                 }
-
-
             }
             catch (Exception ex)
             {

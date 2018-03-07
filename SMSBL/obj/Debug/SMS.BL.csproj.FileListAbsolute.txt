@@ -1,0 +1,96 @@
+E:\USTech\ShoesManagementSystem\ShoesManagementSystem\SMS.BL\bin\Debug\SMS.BL.dll.config
+E:\USTech\ShoesManagementSystem\ShoesManagementSystem\SMS.BL\bin\Debug\SMS.BL.dll
+E:\USTech\ShoesManagementSystem\ShoesManagementSystem\SMS.BL\bin\Debug\SMS.BL.pdb
+E:\USTech\ShoesManagementSystem\ShoesManagementSystem\SMS.BL\bin\Debug\EntityFramework.dll
+E:\USTech\ShoesManagementSystem\ShoesManagementSystem\SMS.BL\bin\Debug\EntityFramework.SqlServer.dll
+E:\USTech\ShoesManagementSystem\ShoesManagementSystem\SMS.BL\bin\Debug\EntityFramework.xml
+E:\USTech\ShoesManagementSystem\ShoesManagementSystem\SMS.BL\bin\Debug\EntityFramework.SqlServer.xml
+E:\USTech\ShoesManagementSystem\ShoesManagementSystem\SMS.BL\obj\Debug\SMS.BL.dll
+E:\USTech\ShoesManagementSystem\ShoesManagementSystem\SMS.BL\obj\Debug\SMS.BL.pdb
+E:\USTech\SMSystems\SMS.BL\bin\Debug\SMS.BL.dll.config
+E:\USTech\SMSystems\SMS.BL\bin\Debug\SMS.BL.dll
+E:\USTech\SMSystems\SMS.BL\bin\Debug\SMS.BL.pdb
+E:\USTech\SMSystems\SMS.BL\bin\Debug\EntityFramework.dll
+E:\USTech\SMSystems\SMS.BL\bin\Debug\EntityFramework.SqlServer.dll
+E:\USTech\SMSystems\SMS.BL\bin\Debug\EntityFramework.xml
+E:\USTech\SMSystems\SMS.BL\bin\Debug\EntityFramework.SqlServer.xml
+E:\USTech\SMSystems\SMS.BL\obj\Debug\SMS.BL.csprojResolveAssemblyReference.cache
+E:\USTech\SMSystems\SMS.BL\obj\Debug\SMS.BL.dll
+E:\USTech\SMSystems\SMS.BL\obj\Debug\SMS.BL.pdb
+C:\Users\awais\Documents\Visual Studio 2015\Projects\SMSystems\SMS.BL\bin\Debug\SMS.BL.dll.config
+C:\Users\awais\Documents\Visual Studio 2015\Projects\SMSystems\SMS.BL\bin\Debug\SMS.BL.dll
+C:\Users\awais\Documents\Visual Studio 2015\Projects\SMSystems\SMS.BL\bin\Debug\SMS.BL.pdb
+C:\Users\awais\Documents\Visual Studio 2015\Projects\SMSystems\SMS.BL\bin\Debug\EntityFramework.dll
+C:\Users\awais\Documents\Visual Studio 2015\Projects\SMSystems\SMS.BL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\awais\Documents\Visual Studio 2015\Projects\SMSystems\SMS.BL\bin\Debug\EntityFramework.xml
+C:\Users\awais\Documents\Visual Studio 2015\Projects\SMSystems\SMS.BL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\awais\Documents\Visual Studio 2015\Projects\SMSystems\SMS.BL\obj\Debug\SMS.BL.dll
+C:\Users\awais\Documents\Visual Studio 2015\Projects\SMSystems\SMS.BL\obj\Debug\SMS.BL.pdb
+E:\USTech\SMSystems\SMSystems\SMS.BL\obj\Debug\SMS.BL.csprojResolveAssemblyReference.cache
+E:\USTech\SMSystems\SMSystems\SMS.BL\obj\Debug\SMS.BL.dll
+E:\USTech\SMSystems\SMSystems\SMS.BL\obj\Debug\SMS.BL.pdb
+E:\USTech\SMSystems\SMSystems\SMS.BL\bin\Debug\SMS.BL.dll.config
+E:\USTech\SMSystems\SMSystems\SMS.BL\bin\Debug\SMS.BL.dll
+E:\USTech\SMSystems\SMSystems\SMS.BL\bin\Debug\SMS.BL.pdb
+E:\USTech\SMSystems\SMSystems\SMS.BL\bin\Debug\EntityFramework.dll
+E:\USTech\SMSystems\SMSystems\SMS.BL\bin\Debug\EntityFramework.SqlServer.dll
+E:\USTech\SMSystems\SMSystems\SMS.BL\bin\Debug\EntityFramework.xml
+E:\USTech\SMSystems\SMSystems\SMS.BL\bin\Debug\EntityFramework.SqlServer.xml
+G:\SMSystems\SMSystems\SMS.BL\bin\Debug\SMS.BL.dll.config
+G:\SMSystems\SMSystems\SMS.BL\bin\Debug\SMS.BL.dll
+G:\SMSystems\SMSystems\SMS.BL\bin\Debug\SMS.BL.pdb
+G:\SMSystems\SMSystems\SMS.BL\bin\Debug\EntityFramework.dll
+G:\SMSystems\SMSystems\SMS.BL\bin\Debug\EntityFramework.SqlServer.dll
+G:\SMSystems\SMSystems\SMS.BL\bin\Debug\EntityFramework.xml
+G:\SMSystems\SMSystems\SMS.BL\bin\Debug\EntityFramework.SqlServer.xml
+G:\SMSystems\SMSystems\SMS.BL\obj\Debug\SMS.BL.csprojResolveAssemblyReference.cache
+G:\SMSystems\SMSystems\SMS.BL\obj\Debug\SMS.BL.dll
+G:\SMSystems\SMSystems\SMS.BL\obj\Debug\SMS.BL.pdb
+E:\OfficeWork\SMSystems\SMSystems\SMS.BL\bin\Debug\SMS.BL.dll.config
+E:\OfficeWork\SMSystems\SMSystems\SMS.BL\bin\Debug\SMS.BL.dll
+E:\OfficeWork\SMSystems\SMSystems\SMS.BL\bin\Debug\SMS.BL.pdb
+E:\OfficeWork\SMSystems\SMSystems\SMS.BL\bin\Debug\EntityFramework.dll
+E:\OfficeWork\SMSystems\SMSystems\SMS.BL\bin\Debug\EntityFramework.SqlServer.dll
+E:\OfficeWork\SMSystems\SMSystems\SMS.BL\bin\Debug\EntityFramework.xml
+E:\OfficeWork\SMSystems\SMSystems\SMS.BL\bin\Debug\EntityFramework.SqlServer.xml
+E:\OfficeWork\SMSystems\SMSystems\SMS.BL\obj\Debug\SMS.BL.dll
+E:\OfficeWork\SMSystems\SMSystems\SMS.BL\obj\Debug\SMS.BL.pdb
+K:\SMSystems\SMSystems\SMS.BL\bin\Debug\SMS.BL.dll.config
+K:\SMSystems\SMSystems\SMS.BL\bin\Debug\SMS.BL.dll
+K:\SMSystems\SMSystems\SMS.BL\bin\Debug\SMS.BL.pdb
+K:\SMSystems\SMSystems\SMS.BL\bin\Debug\EntityFramework.dll
+K:\SMSystems\SMSystems\SMS.BL\bin\Debug\EntityFramework.SqlServer.dll
+K:\SMSystems\SMSystems\SMS.BL\bin\Debug\EntityFramework.xml
+K:\SMSystems\SMSystems\SMS.BL\bin\Debug\EntityFramework.SqlServer.xml
+K:\SMSystems\SMSystems\SMS.BL\obj\Debug\SMS.BL.dll
+K:\SMSystems\SMSystems\SMS.BL\obj\Debug\SMS.BL.pdb
+E:\OfficeWork\SMSystems\SMSystems\SMS.BL\obj\Debug\SMS.BL.csprojResolveAssemblyReference.cache
+C:\Users\awais\Source\Repos\SMSystems\SMS.BL\obj\Debug\SMS.BL.csprojResolveAssemblyReference.cache
+C:\Users\awais\Source\Repos\SMSystems\SMS.BL\bin\Debug\SMS.BL.dll.config
+C:\Users\awais\Source\Repos\SMSystems\SMS.BL\bin\Debug\SMS.BL.dll
+C:\Users\awais\Source\Repos\SMSystems\SMS.BL\bin\Debug\SMS.BL.pdb
+C:\Users\awais\Source\Repos\SMSystems\SMS.BL\bin\Debug\EntityFramework.dll
+C:\Users\awais\Source\Repos\SMSystems\SMS.BL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\awais\Source\Repos\SMSystems\SMS.BL\bin\Debug\EntityFramework.xml
+C:\Users\awais\Source\Repos\SMSystems\SMS.BL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\awais\Source\Repos\SMSystems\SMS.BL\obj\Debug\SMS.BL.dll
+C:\Users\awais\Source\Repos\SMSystems\SMS.BL\obj\Debug\SMS.BL.pdb
+E:\OfficeWork\SMSystems\SMS.BL\bin\Debug\SMS.BL.dll.config
+E:\OfficeWork\SMSystems\SMS.BL\bin\Debug\SMS.BL.dll
+E:\OfficeWork\SMSystems\SMS.BL\bin\Debug\SMS.BL.pdb
+E:\OfficeWork\SMSystems\SMS.BL\bin\Debug\EntityFramework.dll
+E:\OfficeWork\SMSystems\SMS.BL\bin\Debug\EntityFramework.SqlServer.dll
+E:\OfficeWork\SMSystems\SMS.BL\bin\Debug\EntityFramework.xml
+E:\OfficeWork\SMSystems\SMS.BL\bin\Debug\EntityFramework.SqlServer.xml
+E:\OfficeWork\SMSystems\SMS.BL\obj\Debug\SMS.BL.dll
+E:\OfficeWork\SMSystems\SMS.BL\obj\Debug\SMS.BL.pdb
+E:\OfficeWork\usb\SMSystems\SMS.BL\bin\Debug\SMS.BL.dll.config
+E:\OfficeWork\usb\SMSystems\SMS.BL\bin\Debug\SMS.BL.dll
+E:\OfficeWork\usb\SMSystems\SMS.BL\bin\Debug\SMS.BL.pdb
+E:\OfficeWork\usb\SMSystems\SMS.BL\bin\Debug\EntityFramework.dll
+E:\OfficeWork\usb\SMSystems\SMS.BL\bin\Debug\EntityFramework.SqlServer.dll
+E:\OfficeWork\usb\SMSystems\SMS.BL\bin\Debug\EntityFramework.xml
+E:\OfficeWork\usb\SMSystems\SMS.BL\bin\Debug\EntityFramework.SqlServer.xml
+E:\OfficeWork\usb\SMSystems\SMS.BL\obj\Debug\SMS.BL.dll
+E:\OfficeWork\usb\SMSystems\SMS.BL\obj\Debug\SMS.BL.pdb
+E:\OfficeWork\usb\SMSystems\SMS.BL\obj\Debug\SMS.BL.csprojResolveAssemblyReference.cache

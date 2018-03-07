@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMSystems", "SMSystems\SMSystems.csproj", "{46E62DCA-266E-43E4-A821-B474A2CB92EE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMS.BL", "SMS.BL\SMS.BL.csproj", "{5B486CED-D57C-4A18-99A0-1C8E298B3CFA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMSBL", "SMSBL\SMSBL.csproj", "{5B486CED-D57C-4A18-99A0-1C8E298B3CFA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,0 +1,9 @@
+E:\OfficeWork\SMSystems\SMSystems\SMS.BL\bin\Release\SMS.BL.dll.config
+E:\OfficeWork\SMSystems\SMSystems\SMS.BL\bin\Release\SMS.BL.dll
+E:\OfficeWork\SMSystems\SMSystems\SMS.BL\bin\Release\SMS.BL.pdb
+E:\OfficeWork\SMSystems\SMSystems\SMS.BL\bin\Release\EntityFramework.dll
+E:\OfficeWork\SMSystems\SMSystems\SMS.BL\bin\Release\EntityFramework.SqlServer.dll
+E:\OfficeWork\SMSystems\SMSystems\SMS.BL\bin\Release\EntityFramework.xml
+E:\OfficeWork\SMSystems\SMSystems\SMS.BL\bin\Release\EntityFramework.SqlServer.xml
+E:\OfficeWork\SMSystems\SMSystems\SMS.BL\obj\Release\SMS.BL.dll
+E:\OfficeWork\SMSystems\SMSystems\SMS.BL\obj\Release\SMS.BL.pdb

@@ -31,25 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.SideBar = new System.Windows.Forms.Panel();
             this.topLogo = new System.Windows.Forms.Panel();
-            this.PurchaseBtn = new System.Windows.Forms.Button();
-            this.CategoriesBtn = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
             this.buttonIndicator = new System.Windows.Forms.Panel();
-            this.StockBtn = new System.Windows.Forms.Button();
-            this.HomeBtn = new System.Windows.Forms.Button();
-            this.ExpensesBtn = new System.Windows.Forms.Button();
-            this.SupplierBtn = new System.Windows.Forms.Button();
-            this.ReportsBtn = new System.Windows.Forms.Button();
-            this.ProductsBtn = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.MinimizeMaximizeBtn = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.MinimizeBtn = new System.Windows.Forms.Button();
             this.Footer = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -57,17 +45,29 @@
             this.lblStatus = new System.Windows.Forms.Label();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.NavHeader = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.Container = new System.Windows.Forms.Panel();
+            this.MinimizeBtn = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.MinimizeMaximizeBtn = new System.Windows.Forms.Button();
             this.notificationBtn = new System.Windows.Forms.Button();
             this.settingsBtn = new System.Windows.Forms.Button();
             this.ShoppingBtn = new Bunifu.Framework.UI.BunifuTileButton();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.Container = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.PurchaseBtn = new System.Windows.Forms.Button();
+            this.CategoriesBtn = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.StockBtn = new System.Windows.Forms.Button();
+            this.HomeBtn = new System.Windows.Forms.Button();
+            this.ExpensesBtn = new System.Windows.Forms.Button();
+            this.SupplierBtn = new System.Windows.Forms.Button();
+            this.ReportsBtn = new System.Windows.Forms.Button();
+            this.ProductsBtn = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.SideBar.SuspendLayout();
             this.topLogo.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.Footer.SuspendLayout();
             this.LoadingPanel.SuspendLayout();
             this.NavHeader.SuspendLayout();
@@ -103,6 +103,296 @@
             this.topLogo.Name = "topLogo";
             this.topLogo.Size = new System.Drawing.Size(159, 570);
             this.topLogo.TabIndex = 2;
+            // 
+            // buttonIndicator
+            // 
+            this.buttonIndicator.BackColor = System.Drawing.Color.Snow;
+            this.buttonIndicator.Location = new System.Drawing.Point(0, 4);
+            this.buttonIndicator.Name = "buttonIndicator";
+            this.buttonIndicator.Size = new System.Drawing.Size(7, 38);
+            this.buttonIndicator.TabIndex = 36;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel6.Controls.Add(this.panel3);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(0, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(159, 111);
+            this.panel6.TabIndex = 1;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.SaddleBrown;
+            this.panel3.Controls.Add(this.panel7);
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(159, 111);
+            this.panel3.TabIndex = 3;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.White;
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel7.Location = new System.Drawing.Point(0, 108);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(159, 3);
+            this.panel7.TabIndex = 11;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(88, 48);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(51, 21);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Shoes";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(2, 37);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(91, 32);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "MALIK";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.SaddleBrown;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(159, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1000, 10);
+            this.panel2.TabIndex = 1;
+            // 
+            // Footer
+            // 
+            this.Footer.BackColor = System.Drawing.Color.SaddleBrown;
+            this.Footer.Controls.Add(this.pictureBox1);
+            this.Footer.Controls.Add(this.label4);
+            this.Footer.Controls.Add(this.label1);
+            this.Footer.Controls.Add(this.LoadingPanel);
+            this.Footer.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.Footer.Location = new System.Drawing.Point(159, 640);
+            this.Footer.Name = "Footer";
+            this.Footer.Size = new System.Drawing.Size(1000, 41);
+            this.Footer.TabIndex = 13;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(723, 13);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(192, 21);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Ultra Super Technologies";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(646, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(71, 17);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Powered By";
+            // 
+            // LoadingPanel
+            // 
+            this.LoadingPanel.Controls.Add(this.lblStatus);
+            this.LoadingPanel.Controls.Add(this.progressBar1);
+            this.LoadingPanel.Location = new System.Drawing.Point(6, 2);
+            this.LoadingPanel.Name = "LoadingPanel";
+            this.LoadingPanel.Size = new System.Drawing.Size(557, 36);
+            this.LoadingPanel.TabIndex = 6;
+            // 
+            // lblStatus
+            // 
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStatus.ForeColor = System.Drawing.Color.White;
+            this.lblStatus.Location = new System.Drawing.Point(5, 2);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(43, 15);
+            this.lblStatus.TabIndex = 4;
+            this.lblStatus.Text = "Start....";
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(7, 20);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(538, 10);
+            this.progressBar1.TabIndex = 2;
+            // 
+            // NavHeader
+            // 
+            this.NavHeader.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.NavHeader.Controls.Add(this.MinimizeBtn);
+            this.NavHeader.Controls.Add(this.button2);
+            this.NavHeader.Controls.Add(this.MinimizeMaximizeBtn);
+            this.NavHeader.Controls.Add(this.notificationBtn);
+            this.NavHeader.Controls.Add(this.settingsBtn);
+            this.NavHeader.Controls.Add(this.ShoppingBtn);
+            this.NavHeader.Controls.Add(this.panel4);
+            this.NavHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.NavHeader.Location = new System.Drawing.Point(159, 10);
+            this.NavHeader.Name = "NavHeader";
+            this.NavHeader.Size = new System.Drawing.Size(1000, 101);
+            this.NavHeader.TabIndex = 14;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.SaddleBrown;
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel4.Location = new System.Drawing.Point(0, 100);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1000, 1);
+            this.panel4.TabIndex = 13;
+            // 
+            // Container
+            // 
+            this.Container.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Container.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Container.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Container.Location = new System.Drawing.Point(159, 111);
+            this.Container.Name = "Container";
+            this.Container.Size = new System.Drawing.Size(1000, 529);
+            this.Container.TabIndex = 15;
+            // 
+            // MinimizeBtn
+            // 
+            this.MinimizeBtn.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.MinimizeBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.MinimizeBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.MinimizeBtn.FlatAppearance.BorderSize = 0;
+            this.MinimizeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MinimizeBtn.Font = new System.Drawing.Font("Segoe UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MinimizeBtn.ForeColor = System.Drawing.Color.White;
+            this.MinimizeBtn.Image = global::SMSystems.Properties.Resources.icons8_close_window_26;
+            this.MinimizeBtn.Location = new System.Drawing.Point(953, 15);
+            this.MinimizeBtn.Name = "MinimizeBtn";
+            this.MinimizeBtn.Size = new System.Drawing.Size(33, 27);
+            this.MinimizeBtn.TabIndex = 18;
+            this.MinimizeBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.MinimizeBtn.UseVisualStyleBackColor = true;
+            this.MinimizeBtn.Click += new System.EventHandler(this.MinimizeBtn_Click);
+            // 
+            // button2
+            // 
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Segoe UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Image = global::SMSystems.Properties.Resources.icons8_minimize_window_26;
+            this.button2.Location = new System.Drawing.Point(881, 15);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(33, 27);
+            this.button2.TabIndex = 19;
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // MinimizeMaximizeBtn
+            // 
+            this.MinimizeMaximizeBtn.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.MinimizeMaximizeBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.MinimizeMaximizeBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.MinimizeMaximizeBtn.FlatAppearance.BorderSize = 0;
+            this.MinimizeMaximizeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MinimizeMaximizeBtn.Font = new System.Drawing.Font("Segoe UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MinimizeMaximizeBtn.ForeColor = System.Drawing.Color.White;
+            this.MinimizeMaximizeBtn.Image = global::SMSystems.Properties.Resources.icons8_maximize_window_26;
+            this.MinimizeMaximizeBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.MinimizeMaximizeBtn.Location = new System.Drawing.Point(917, 15);
+            this.MinimizeMaximizeBtn.Name = "MinimizeMaximizeBtn";
+            this.MinimizeMaximizeBtn.Size = new System.Drawing.Size(33, 27);
+            this.MinimizeMaximizeBtn.TabIndex = 20;
+            this.MinimizeMaximizeBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.MinimizeMaximizeBtn.UseVisualStyleBackColor = true;
+            this.MinimizeMaximizeBtn.Click += new System.EventHandler(this.MinimizeMaximizeBtn_Click);
+            // 
+            // notificationBtn
+            // 
+            this.notificationBtn.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.notificationBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.notificationBtn.FlatAppearance.BorderSize = 0;
+            this.notificationBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.notificationBtn.Font = new System.Drawing.Font("Segoe UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.notificationBtn.ForeColor = System.Drawing.Color.White;
+            this.notificationBtn.Image = ((System.Drawing.Image)(resources.GetObject("notificationBtn.Image")));
+            this.notificationBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.notificationBtn.Location = new System.Drawing.Point(809, 15);
+            this.notificationBtn.Name = "notificationBtn";
+            this.notificationBtn.Size = new System.Drawing.Size(33, 27);
+            this.notificationBtn.TabIndex = 17;
+            this.notificationBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.notificationBtn.UseVisualStyleBackColor = true;
+            // 
+            // settingsBtn
+            // 
+            this.settingsBtn.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.settingsBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.settingsBtn.FlatAppearance.BorderSize = 0;
+            this.settingsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.settingsBtn.Font = new System.Drawing.Font("Segoe UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.settingsBtn.ForeColor = System.Drawing.Color.White;
+            this.settingsBtn.Image = global::SMSystems.Properties.Resources.Settings_24;
+            this.settingsBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.settingsBtn.Location = new System.Drawing.Point(845, 15);
+            this.settingsBtn.Name = "settingsBtn";
+            this.settingsBtn.Size = new System.Drawing.Size(33, 27);
+            this.settingsBtn.TabIndex = 16;
+            this.settingsBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.settingsBtn.UseVisualStyleBackColor = true;
+            // 
+            // ShoppingBtn
+            // 
+            this.ShoppingBtn.BackColor = System.Drawing.Color.SaddleBrown;
+            this.ShoppingBtn.color = System.Drawing.Color.SaddleBrown;
+            this.ShoppingBtn.colorActive = System.Drawing.Color.Chocolate;
+            this.ShoppingBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ShoppingBtn.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ShoppingBtn.ForeColor = System.Drawing.Color.White;
+            this.ShoppingBtn.Image = global::SMSystems.Properties.Resources.Bag_24;
+            this.ShoppingBtn.ImagePosition = 14;
+            this.ShoppingBtn.ImageZoom = 50;
+            this.ShoppingBtn.LabelPosition = 29;
+            this.ShoppingBtn.LabelText = "Shopping";
+            this.ShoppingBtn.Location = new System.Drawing.Point(23, 19);
+            this.ShoppingBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ShoppingBtn.Name = "ShoppingBtn";
+            this.ShoppingBtn.Size = new System.Drawing.Size(64, 74);
+            this.ShoppingBtn.TabIndex = 14;
+            this.ShoppingBtn.Click += new System.EventHandler(this.ShoppingBtn_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox1.Image = global::SMSystems.Properties.Resources.loader3;
+            this.pictureBox1.Location = new System.Drawing.Point(921, -10);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(78, 65);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
             // 
             // PurchaseBtn
             // 
@@ -151,20 +441,12 @@
             this.button8.ForeColor = System.Drawing.Color.White;
             this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
             this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.Location = new System.Drawing.Point(123, 529);
+            this.button8.Location = new System.Drawing.Point(0, 532);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(33, 38);
             this.button8.TabIndex = 11;
             this.button8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button8.UseVisualStyleBackColor = true;
-            // 
-            // buttonIndicator
-            // 
-            this.buttonIndicator.BackColor = System.Drawing.Color.Snow;
-            this.buttonIndicator.Location = new System.Drawing.Point(0, 4);
-            this.buttonIndicator.Name = "buttonIndicator";
-            this.buttonIndicator.Size = new System.Drawing.Size(7, 38);
-            this.buttonIndicator.TabIndex = 36;
             // 
             // StockBtn
             // 
@@ -242,6 +524,7 @@
             // ReportsBtn
             // 
             this.ReportsBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ReportsBtn.Enabled = false;
             this.ReportsBtn.FlatAppearance.BorderSize = 0;
             this.ReportsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ReportsBtn.Font = new System.Drawing.Font("Segoe UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -274,290 +557,6 @@
             this.ProductsBtn.UseVisualStyleBackColor = true;
             this.ProductsBtn.Click += new System.EventHandler(this.ProductsBtn_Click);
             // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel6.Controls.Add(this.panel3);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(0, 0);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(159, 111);
-            this.panel6.TabIndex = 1;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.SaddleBrown;
-            this.panel3.Controls.Add(this.panel7);
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.label2);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(159, 111);
-            this.panel3.TabIndex = 3;
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.White;
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel7.Location = new System.Drawing.Point(0, 108);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(159, 3);
-            this.panel7.TabIndex = 11;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(92, 6);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 21);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Shoes";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(1, -3);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 32);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "MALIK";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.SaddleBrown;
-            this.panel2.Controls.Add(this.MinimizeMaximizeBtn);
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.MinimizeBtn);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(159, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1000, 23);
-            this.panel2.TabIndex = 1;
-            // 
-            // MinimizeMaximizeBtn
-            // 
-            this.MinimizeMaximizeBtn.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.MinimizeMaximizeBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.MinimizeMaximizeBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.MinimizeMaximizeBtn.FlatAppearance.BorderSize = 0;
-            this.MinimizeMaximizeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MinimizeMaximizeBtn.Font = new System.Drawing.Font("Segoe UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MinimizeMaximizeBtn.ForeColor = System.Drawing.Color.White;
-            this.MinimizeMaximizeBtn.Image = global::SMSystems.Properties.Resources.Crop_Square_24;
-            this.MinimizeMaximizeBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.MinimizeMaximizeBtn.Location = new System.Drawing.Point(921, 0);
-            this.MinimizeMaximizeBtn.Name = "MinimizeMaximizeBtn";
-            this.MinimizeMaximizeBtn.Size = new System.Drawing.Size(33, 25);
-            this.MinimizeMaximizeBtn.TabIndex = 20;
-            this.MinimizeMaximizeBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.MinimizeMaximizeBtn.UseVisualStyleBackColor = true;
-            this.MinimizeMaximizeBtn.Click += new System.EventHandler(this.MinimizeMaximizeBtn_Click);
-            // 
-            // button2
-            // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = global::SMSystems.Properties.Resources.Minus_24;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(882, 7);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(33, 17);
-            this.button2.TabIndex = 19;
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // MinimizeBtn
-            // 
-            this.MinimizeBtn.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.MinimizeBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.MinimizeBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.MinimizeBtn.FlatAppearance.BorderSize = 0;
-            this.MinimizeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MinimizeBtn.Font = new System.Drawing.Font("Segoe UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MinimizeBtn.ForeColor = System.Drawing.Color.White;
-            this.MinimizeBtn.Image = global::SMSystems.Properties.Resources.Close_24;
-            this.MinimizeBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.MinimizeBtn.Location = new System.Drawing.Point(960, 3);
-            this.MinimizeBtn.Name = "MinimizeBtn";
-            this.MinimizeBtn.Size = new System.Drawing.Size(33, 17);
-            this.MinimizeBtn.TabIndex = 18;
-            this.MinimizeBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.MinimizeBtn.UseVisualStyleBackColor = true;
-            this.MinimizeBtn.Click += new System.EventHandler(this.MinimizeBtn_Click);
-            // 
-            // Footer
-            // 
-            this.Footer.BackColor = System.Drawing.Color.SaddleBrown;
-            this.Footer.Controls.Add(this.pictureBox1);
-            this.Footer.Controls.Add(this.label4);
-            this.Footer.Controls.Add(this.label1);
-            this.Footer.Controls.Add(this.LoadingPanel);
-            this.Footer.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.Footer.Location = new System.Drawing.Point(159, 640);
-            this.Footer.Name = "Footer";
-            this.Footer.Size = new System.Drawing.Size(1000, 41);
-            this.Footer.TabIndex = 13;
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(723, 13);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(192, 21);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Ultra Super Technologies";
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(646, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 17);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Powered By";
-            // 
-            // LoadingPanel
-            // 
-            this.LoadingPanel.Controls.Add(this.lblStatus);
-            this.LoadingPanel.Controls.Add(this.progressBar1);
-            this.LoadingPanel.Location = new System.Drawing.Point(6, 2);
-            this.LoadingPanel.Name = "LoadingPanel";
-            this.LoadingPanel.Size = new System.Drawing.Size(557, 36);
-            this.LoadingPanel.TabIndex = 6;
-            // 
-            // lblStatus
-            // 
-            this.lblStatus.AutoSize = true;
-            this.lblStatus.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStatus.ForeColor = System.Drawing.Color.White;
-            this.lblStatus.Location = new System.Drawing.Point(5, 2);
-            this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(43, 15);
-            this.lblStatus.TabIndex = 4;
-            this.lblStatus.Text = "Start....";
-            // 
-            // progressBar1
-            // 
-            this.progressBar1.Location = new System.Drawing.Point(7, 20);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(538, 10);
-            this.progressBar1.TabIndex = 2;
-            // 
-            // NavHeader
-            // 
-            this.NavHeader.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.NavHeader.Controls.Add(this.notificationBtn);
-            this.NavHeader.Controls.Add(this.settingsBtn);
-            this.NavHeader.Controls.Add(this.ShoppingBtn);
-            this.NavHeader.Controls.Add(this.panel4);
-            this.NavHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.NavHeader.Location = new System.Drawing.Point(159, 23);
-            this.NavHeader.Name = "NavHeader";
-            this.NavHeader.Size = new System.Drawing.Size(1000, 88);
-            this.NavHeader.TabIndex = 14;
-            // 
-            // notificationBtn
-            // 
-            this.notificationBtn.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.notificationBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.notificationBtn.FlatAppearance.BorderSize = 0;
-            this.notificationBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.notificationBtn.Font = new System.Drawing.Font("Segoe UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.notificationBtn.ForeColor = System.Drawing.Color.White;
-            this.notificationBtn.Image = ((System.Drawing.Image)(resources.GetObject("notificationBtn.Image")));
-            this.notificationBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.notificationBtn.Location = new System.Drawing.Point(921, 8);
-            this.notificationBtn.Name = "notificationBtn";
-            this.notificationBtn.Size = new System.Drawing.Size(33, 38);
-            this.notificationBtn.TabIndex = 17;
-            this.notificationBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.notificationBtn.UseVisualStyleBackColor = true;
-            // 
-            // settingsBtn
-            // 
-            this.settingsBtn.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.settingsBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.settingsBtn.FlatAppearance.BorderSize = 0;
-            this.settingsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.settingsBtn.Font = new System.Drawing.Font("Segoe UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.settingsBtn.ForeColor = System.Drawing.Color.White;
-            this.settingsBtn.Image = global::SMSystems.Properties.Resources.Settings_24;
-            this.settingsBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.settingsBtn.Location = new System.Drawing.Point(960, 8);
-            this.settingsBtn.Name = "settingsBtn";
-            this.settingsBtn.Size = new System.Drawing.Size(33, 38);
-            this.settingsBtn.TabIndex = 16;
-            this.settingsBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.settingsBtn.UseVisualStyleBackColor = true;
-            // 
-            // ShoppingBtn
-            // 
-            this.ShoppingBtn.BackColor = System.Drawing.Color.SaddleBrown;
-            this.ShoppingBtn.color = System.Drawing.Color.SaddleBrown;
-            this.ShoppingBtn.colorActive = System.Drawing.Color.Chocolate;
-            this.ShoppingBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ShoppingBtn.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ShoppingBtn.ForeColor = System.Drawing.Color.White;
-            this.ShoppingBtn.Image = global::SMSystems.Properties.Resources.Bag_24;
-            this.ShoppingBtn.ImagePosition = 14;
-            this.ShoppingBtn.ImageZoom = 50;
-            this.ShoppingBtn.LabelPosition = 29;
-            this.ShoppingBtn.LabelText = "Shopping";
-            this.ShoppingBtn.Location = new System.Drawing.Point(16, 7);
-            this.ShoppingBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ShoppingBtn.Name = "ShoppingBtn";
-            this.ShoppingBtn.Size = new System.Drawing.Size(64, 74);
-            this.ShoppingBtn.TabIndex = 14;
-            this.ShoppingBtn.Click += new System.EventHandler(this.ShoppingBtn_Click);
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.SaddleBrown;
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 87);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1000, 1);
-            this.panel4.TabIndex = 13;
-            // 
-            // Container
-            // 
-            this.Container.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Container.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Container.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Container.Location = new System.Drawing.Point(159, 111);
-            this.Container.Name = "Container";
-            this.Container.Size = new System.Drawing.Size(1000, 529);
-            this.Container.TabIndex = 15;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox1.Image = global::SMSystems.Properties.Resources.loader3;
-            this.pictureBox1.Location = new System.Drawing.Point(921, -10);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(78, 65);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -578,7 +577,6 @@
             this.panel6.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.panel2.ResumeLayout(false);
             this.Footer.ResumeLayout(false);
             this.Footer.PerformLayout();
             this.LoadingPanel.ResumeLayout(false);
@@ -625,6 +623,7 @@
         private System.Windows.Forms.Button MinimizeMaximizeBtn;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
 

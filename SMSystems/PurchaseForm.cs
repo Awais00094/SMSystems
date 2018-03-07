@@ -1,7 +1,7 @@
-﻿using SMS.BL;
-using SMS.BL.BLL;
-using SMS.BL.Entities;
-using SMS.BL.Enum;
+﻿using SMSBL;
+using SMSBL.BLL;
+using SMSBL.Entities;
+using SMSBL.Enum;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -134,6 +134,7 @@ namespace SMSystems
         }
         private void AddPurchasebtn_Click(object sender, EventArgs e)
         {
+            
             long? PurchaseID = -1;
             long? SupplierID = Convert.ToInt64(this.supplierCombobox.SelectedValue);
             DateTime PurchaseDate = this.dtpicker.Value;
@@ -141,6 +142,12 @@ namespace SMSystems
             decimal TotalPurchaseValue = Convert.ToDecimal(this.TPurchaseValuetxt.Text);
             decimal TotalDiscountValue = Convert.ToDecimal(this.TDiscountValuetxt.Text);
             decimal TotalPaidValue = Convert.ToDecimal(this.totalPaidValuetxt.Text);
+            if (TotalPaidValue > (TotalPurchaseValue - TotalDiscountValue))
+            {
+                MessageBox.Show("TotalPaidValue can't be greater than NetPurchaseValue!...");
+                return;
+            }
+
             string PurchaseInvoiceNo = this.PurchaseInvoiceNotxt.Text;
             DataTable PurchaseDetailDT = new DataTable();
             PurchaseDetailDT = CreateDataColumns(PurchaseDetailDT);
@@ -228,6 +235,10 @@ namespace SMSystems
             if (this.Quantitytxt.Text == "" || this.Quantitytxt.Text == null || this.WSalePricetxt.Text == "" || this.WSalePricetxt.Text == null)
             {
                 MessageBox.Show("Fill the WSalePrice and Quantity!... ");
+            }
+            else if (Convert.ToDecimal(this.WSalePricetxt.Text)> Convert.ToDecimal(this.salepricetxt.Text))
+            {
+                MessageBox.Show("WSalePrice can't be greater than SalePrice!... ");
             }
             else
             {

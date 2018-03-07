@@ -1,4 +1,4 @@
-﻿using SMS.BL.BLL;
+﻿using SMSBL.BLL;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,6 +17,10 @@ namespace SMSystems
         {
             InitializeComponent();
             fillGrid();
+        }
+        private void StockForm_Load(object sender, EventArgs e)
+        {
+            StockGridView.ClearSelection();
         }
         void fillGrid()
         {

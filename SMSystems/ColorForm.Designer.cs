@@ -378,6 +378,7 @@
             this.GridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.GridView.Size = new System.Drawing.Size(506, 421);
             this.GridView.TabIndex = 34;
+            this.GridView.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
             // ColorForm
             // 

@@ -1,6 +1,6 @@
-﻿using SMS.BL;
-using SMS.BL.BLL;
-using SMS.BL.Entities;
+﻿using SMSBL;
+using SMSBL.BLL;
+using SMSBL.Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
