@@ -28,40 +28,49 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SizeForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label5 = new System.Windows.Forms.Label();
             this.Searchtxt = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.bunifuCards3 = new Bunifu.Framework.UI.BunifuCards();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.Deletebtn = new System.Windows.Forms.Button();
             this.bunifuCards2 = new Bunifu.Framework.UI.BunifuCards();
-            this.Addbtn = new System.Windows.Forms.Button();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.DescriptionAddtxt = new System.Windows.Forms.TextBox();
             this.NameAddtxt = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
-            this.updatebtn = new System.Windows.Forms.Button();
             this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.updateDescriptiontxt = new System.Windows.Forms.TextBox();
             this.updateNametxt = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.colorbtn = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.PagingPanel = new System.Windows.Forms.Panel();
             this.SizeGridView = new System.Windows.Forms.DataGridView();
+            this.PagingControls = new System.Windows.Forms.Panel();
+            this.PageIndicator = new System.Windows.Forms.Label();
+            this.prevBtn = new System.Windows.Forms.Button();
+            this.nextBtn = new System.Windows.Forms.Button();
+            this.lastBtn = new System.Windows.Forms.Button();
+            this.fist = new System.Windows.Forms.Button();
+            this.colorbtn = new System.Windows.Forms.Button();
+            this.Deletebtn = new System.Windows.Forms.Button();
+            this.Addbtn = new System.Windows.Forms.Button();
+            this.updatebtn = new System.Windows.Forms.Button();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.bunifuCards3.SuspendLayout();
             this.bunifuCards2.SuspendLayout();
             this.bunifuCards1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.PagingPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SizeGridView)).BeginInit();
+            this.PagingControls.SuspendLayout();
             this.SuspendLayout();
             // 
             // label5
@@ -91,7 +100,7 @@
             this.panel1.Controls.Add(this.bunifuCards2);
             this.panel1.Controls.Add(this.bunifuCards1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(505, 0);
+            this.panel1.Location = new System.Drawing.Point(622, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(286, 475);
             this.panel1.TabIndex = 12;
@@ -133,22 +142,6 @@
             this.bunifuCustomLabel2.Text = "Action";
             this.bunifuCustomLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Deletebtn
-            // 
-            this.Deletebtn.FlatAppearance.BorderSize = 0;
-            this.Deletebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Deletebtn.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Deletebtn.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.Deletebtn.Image = ((System.Drawing.Image)(resources.GetObject("Deletebtn.Image")));
-            this.Deletebtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Deletebtn.Location = new System.Drawing.Point(67, 59);
-            this.Deletebtn.Name = "Deletebtn";
-            this.Deletebtn.Size = new System.Drawing.Size(121, 28);
-            this.Deletebtn.TabIndex = 13;
-            this.Deletebtn.Text = "     Delete";
-            this.Deletebtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Deletebtn.UseVisualStyleBackColor = true;
-            // 
             // bunifuCards2
             // 
             this.bunifuCards2.BackColor = System.Drawing.Color.White;
@@ -168,23 +161,6 @@
             this.bunifuCards2.ShadowDepth = 20;
             this.bunifuCards2.Size = new System.Drawing.Size(243, 128);
             this.bunifuCards2.TabIndex = 30;
-            // 
-            // Addbtn
-            // 
-            this.Addbtn.FlatAppearance.BorderSize = 0;
-            this.Addbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Addbtn.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Addbtn.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.Addbtn.Image = ((System.Drawing.Image)(resources.GetObject("Addbtn.Image")));
-            this.Addbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Addbtn.Location = new System.Drawing.Point(100, 85);
-            this.Addbtn.Name = "Addbtn";
-            this.Addbtn.Size = new System.Drawing.Size(121, 28);
-            this.Addbtn.TabIndex = 30;
-            this.Addbtn.Text = "     Add";
-            this.Addbtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Addbtn.UseVisualStyleBackColor = true;
-            this.Addbtn.Click += new System.EventHandler(this.Addbtn_Click);
             // 
             // bunifuCustomLabel1
             // 
@@ -250,23 +226,6 @@
             this.bunifuCards1.Size = new System.Drawing.Size(243, 128);
             this.bunifuCards1.TabIndex = 29;
             // 
-            // updatebtn
-            // 
-            this.updatebtn.FlatAppearance.BorderSize = 0;
-            this.updatebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.updatebtn.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updatebtn.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.updatebtn.Image = ((System.Drawing.Image)(resources.GetObject("updatebtn.Image")));
-            this.updatebtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.updatebtn.Location = new System.Drawing.Point(100, 85);
-            this.updatebtn.Name = "updatebtn";
-            this.updatebtn.Size = new System.Drawing.Size(131, 28);
-            this.updatebtn.TabIndex = 30;
-            this.updatebtn.Text = "     Update";
-            this.updatebtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.updatebtn.UseVisualStyleBackColor = true;
-            this.updatebtn.Click += new System.EventHandler(this.updatebtn_Click);
-            // 
             // bunifuCustomLabel6
             // 
             this.bunifuCustomLabel6.BackColor = System.Drawing.Color.Transparent;
@@ -319,8 +278,154 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(505, 54);
+            this.panel2.Size = new System.Drawing.Size(622, 54);
             this.panel2.TabIndex = 13;
+            // 
+            // PagingPanel
+            // 
+            this.PagingPanel.BackColor = System.Drawing.SystemColors.Control;
+            this.PagingPanel.Controls.Add(this.panel6);
+            this.PagingPanel.Controls.Add(this.PagingControls);
+            this.PagingPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.PagingPanel.Location = new System.Drawing.Point(0, 437);
+            this.PagingPanel.Name = "PagingPanel";
+            this.PagingPanel.Size = new System.Drawing.Size(622, 38);
+            this.PagingPanel.TabIndex = 36;
+            // 
+            // SizeGridView
+            // 
+            this.SizeGridView.AllowUserToAddRows = false;
+            this.SizeGridView.AllowUserToDeleteRows = false;
+            this.SizeGridView.AllowUserToResizeColumns = false;
+            this.SizeGridView.AllowUserToResizeRows = false;
+            this.SizeGridView.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.SizeGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.SaddleBrown;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.SaddleBrown;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.SizeGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            this.SizeGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.SizeGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SizeGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.SizeGridView.EnableHeadersVisualStyles = false;
+            this.SizeGridView.GridColor = System.Drawing.Color.SaddleBrown;
+            this.SizeGridView.Location = new System.Drawing.Point(0, 54);
+            this.SizeGridView.MultiSelect = false;
+            this.SizeGridView.Name = "SizeGridView";
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.SaddleBrown;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.SaddleBrown;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.SizeGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            this.SizeGridView.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.SizeGridView.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
+            this.SizeGridView.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Segoe UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SizeGridView.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.SizeGridView.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.SaddleBrown;
+            this.SizeGridView.RowTemplate.DefaultCellStyle.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.SizeGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.SizeGridView.Size = new System.Drawing.Size(622, 383);
+            this.SizeGridView.TabIndex = 37;
+            // 
+            // PagingControls
+            // 
+            this.PagingControls.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PagingControls.BackColor = System.Drawing.SystemColors.Control;
+            this.PagingControls.Controls.Add(this.PageIndicator);
+            this.PagingControls.Controls.Add(this.prevBtn);
+            this.PagingControls.Controls.Add(this.nextBtn);
+            this.PagingControls.Controls.Add(this.lastBtn);
+            this.PagingControls.Controls.Add(this.fist);
+            this.PagingControls.Location = new System.Drawing.Point(202, 3);
+            this.PagingControls.Name = "PagingControls";
+            this.PagingControls.Size = new System.Drawing.Size(218, 34);
+            this.PagingControls.TabIndex = 17;
+            // 
+            // PageIndicator
+            // 
+            this.PageIndicator.AutoSize = true;
+            this.PageIndicator.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PageIndicator.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.PageIndicator.Location = new System.Drawing.Point(87, 8);
+            this.PageIndicator.Name = "PageIndicator";
+            this.PageIndicator.Size = new System.Drawing.Size(41, 17);
+            this.PageIndicator.TabIndex = 21;
+            this.PageIndicator.Text = "1/100";
+            // 
+            // prevBtn
+            // 
+            this.prevBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.prevBtn.FlatAppearance.BorderSize = 0;
+            this.prevBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.prevBtn.Font = new System.Drawing.Font("Segoe UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.prevBtn.ForeColor = System.Drawing.Color.White;
+            this.prevBtn.Image = global::SMSystems.Properties.Resources.Arrow_Left_241;
+            this.prevBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.prevBtn.Location = new System.Drawing.Point(50, 1);
+            this.prevBtn.Name = "prevBtn";
+            this.prevBtn.Size = new System.Drawing.Size(33, 30);
+            this.prevBtn.TabIndex = 20;
+            this.prevBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.prevBtn.UseVisualStyleBackColor = true;
+            this.prevBtn.Click += new System.EventHandler(this.prevBtn_Click);
+            // 
+            // nextBtn
+            // 
+            this.nextBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.nextBtn.FlatAppearance.BorderSize = 0;
+            this.nextBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.nextBtn.Font = new System.Drawing.Font("Segoe UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nextBtn.ForeColor = System.Drawing.Color.White;
+            this.nextBtn.Image = global::SMSystems.Properties.Resources.Arrow_Right_241;
+            this.nextBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.nextBtn.Location = new System.Drawing.Point(129, 1);
+            this.nextBtn.Name = "nextBtn";
+            this.nextBtn.Size = new System.Drawing.Size(33, 30);
+            this.nextBtn.TabIndex = 19;
+            this.nextBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.nextBtn.UseVisualStyleBackColor = true;
+            this.nextBtn.Click += new System.EventHandler(this.nextBtn_Click);
+            // 
+            // lastBtn
+            // 
+            this.lastBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lastBtn.FlatAppearance.BorderSize = 0;
+            this.lastBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lastBtn.Font = new System.Drawing.Font("Segoe UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lastBtn.ForeColor = System.Drawing.Color.White;
+            this.lastBtn.Image = global::SMSystems.Properties.Resources.Next_Fast_Step_241;
+            this.lastBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lastBtn.Location = new System.Drawing.Point(168, 1);
+            this.lastBtn.Name = "lastBtn";
+            this.lastBtn.Size = new System.Drawing.Size(33, 30);
+            this.lastBtn.TabIndex = 18;
+            this.lastBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.lastBtn.UseVisualStyleBackColor = true;
+            this.lastBtn.Click += new System.EventHandler(this.lastBtn_Click);
+            // 
+            // fist
+            // 
+            this.fist.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.fist.FlatAppearance.BorderSize = 0;
+            this.fist.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.fist.Font = new System.Drawing.Font("Segoe UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fist.ForeColor = System.Drawing.Color.White;
+            this.fist.Image = global::SMSystems.Properties.Resources.Previous_Fast_Step_241;
+            this.fist.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.fist.Location = new System.Drawing.Point(11, 1);
+            this.fist.Name = "fist";
+            this.fist.Size = new System.Drawing.Size(33, 30);
+            this.fist.TabIndex = 17;
+            this.fist.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.fist.UseVisualStyleBackColor = true;
+            this.fist.Click += new System.EventHandler(this.fist_Click);
             // 
             // colorbtn
             // 
@@ -339,64 +444,72 @@
             this.colorbtn.UseVisualStyleBackColor = true;
             this.colorbtn.Click += new System.EventHandler(this.colorbtn_Click);
             // 
-            // panel4
+            // Deletebtn
             // 
-            this.panel4.BackColor = System.Drawing.Color.SaddleBrown;
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 452);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(505, 23);
-            this.panel4.TabIndex = 36;
+            this.Deletebtn.FlatAppearance.BorderSize = 0;
+            this.Deletebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Deletebtn.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Deletebtn.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.Deletebtn.Image = ((System.Drawing.Image)(resources.GetObject("Deletebtn.Image")));
+            this.Deletebtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Deletebtn.Location = new System.Drawing.Point(67, 59);
+            this.Deletebtn.Name = "Deletebtn";
+            this.Deletebtn.Size = new System.Drawing.Size(121, 28);
+            this.Deletebtn.TabIndex = 13;
+            this.Deletebtn.Text = "     Delete";
+            this.Deletebtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Deletebtn.UseVisualStyleBackColor = true;
             // 
-            // SizeGridView
+            // Addbtn
             // 
-            this.SizeGridView.AllowUserToAddRows = false;
-            this.SizeGridView.AllowUserToDeleteRows = false;
-            this.SizeGridView.AllowUserToResizeColumns = false;
-            this.SizeGridView.AllowUserToResizeRows = false;
-            this.SizeGridView.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.SizeGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.SaddleBrown;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.SaddleBrown;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.SizeGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.SizeGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.SizeGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SizeGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.SizeGridView.EnableHeadersVisualStyles = false;
-            this.SizeGridView.GridColor = System.Drawing.Color.SaddleBrown;
-            this.SizeGridView.Location = new System.Drawing.Point(0, 54);
-            this.SizeGridView.MultiSelect = false;
-            this.SizeGridView.Name = "SizeGridView";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.SaddleBrown;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SaddleBrown;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.SizeGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.SizeGridView.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.SizeGridView.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
-            this.SizeGridView.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Segoe UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SizeGridView.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.SizeGridView.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.SaddleBrown;
-            this.SizeGridView.RowTemplate.DefaultCellStyle.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.SizeGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.SizeGridView.Size = new System.Drawing.Size(505, 398);
-            this.SizeGridView.TabIndex = 37;
+            this.Addbtn.FlatAppearance.BorderSize = 0;
+            this.Addbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Addbtn.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Addbtn.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.Addbtn.Image = ((System.Drawing.Image)(resources.GetObject("Addbtn.Image")));
+            this.Addbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Addbtn.Location = new System.Drawing.Point(100, 85);
+            this.Addbtn.Name = "Addbtn";
+            this.Addbtn.Size = new System.Drawing.Size(121, 28);
+            this.Addbtn.TabIndex = 30;
+            this.Addbtn.Text = "     Add";
+            this.Addbtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Addbtn.UseVisualStyleBackColor = true;
+            this.Addbtn.Click += new System.EventHandler(this.Addbtn_Click);
+            // 
+            // updatebtn
+            // 
+            this.updatebtn.FlatAppearance.BorderSize = 0;
+            this.updatebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.updatebtn.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updatebtn.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.updatebtn.Image = ((System.Drawing.Image)(resources.GetObject("updatebtn.Image")));
+            this.updatebtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.updatebtn.Location = new System.Drawing.Point(100, 85);
+            this.updatebtn.Name = "updatebtn";
+            this.updatebtn.Size = new System.Drawing.Size(131, 28);
+            this.updatebtn.TabIndex = 30;
+            this.updatebtn.Text = "     Update";
+            this.updatebtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.updatebtn.UseVisualStyleBackColor = true;
+            this.updatebtn.Click += new System.EventHandler(this.updatebtn_Click);
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.SaddleBrown;
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(0, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(622, 1);
+            this.panel6.TabIndex = 18;
             // 
             // SizeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(791, 475);
+            this.ClientSize = new System.Drawing.Size(908, 475);
             this.Controls.Add(this.SizeGridView);
-            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.PagingPanel);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -411,7 +524,10 @@
             this.bunifuCards1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.PagingPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SizeGridView)).EndInit();
+            this.PagingControls.ResumeLayout(false);
+            this.PagingControls.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -441,7 +557,14 @@
         private System.Windows.Forms.Button Addbtn;
         private System.Windows.Forms.Button updatebtn;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel PagingPanel;
         private System.Windows.Forms.DataGridView SizeGridView;
+        private System.Windows.Forms.Panel PagingControls;
+        private System.Windows.Forms.Label PageIndicator;
+        private System.Windows.Forms.Button prevBtn;
+        private System.Windows.Forms.Button nextBtn;
+        private System.Windows.Forms.Button lastBtn;
+        private System.Windows.Forms.Button fist;
+        private System.Windows.Forms.Panel panel6;
     }
 }

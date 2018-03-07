@@ -436,6 +436,63 @@
   <ItemGroup>
     <None Include="Resources\Next Fast Step-24.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Previous Fast Step-241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Next Fast Step-241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arrow Right-241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arrow Left-241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cross-24 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\runner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh-left-arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\runner %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\runner %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\conversation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\four-black-squares.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\credit-card-and-purchase-receipt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shopping.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shopping %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\man-with-company %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clipboards.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

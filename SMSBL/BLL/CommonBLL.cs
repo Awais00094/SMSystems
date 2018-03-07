@@ -8,7 +8,6 @@ using System.Data.Sql;
 using System.Data.Common;
 using System.Data;
 using System.Data.SqlClient;
-using SMSBL;
 
 namespace SMSBL.BLL
 {
@@ -50,7 +49,15 @@ namespace SMSBL.BLL
             }
             
             return result;
-        }       
+        }
+
+        public static int getSizesListCount()
+        {
+            //SMSEntities db = new SMSEntities();
+            int count = App.db.Sizes.Count();
+            return count;
+        }
+
         public static void CommonDataUpdate(CommonModel obj)
     {
         string ConnectionString = "data source=.;initial catalog=SMS;user id=sa;password=Pakistan1947;";
@@ -77,10 +84,10 @@ namespace SMSBL.BLL
     }
         public static  List<CommonList> GetSizeList()
         {
-            SMSEntities db = new SMSEntities();
+            //SMSEntities db = new SMSEntities();
             List<CommonList> list = new List<CommonList>();
 
-            list = db.Sizes
+            list = App.db.Sizes
                        .Where(x => x.IsDeleted == false)
                        .Select(x => new CommonList
                        {
@@ -90,12 +97,30 @@ namespace SMSBL.BLL
                        }).ToList();
             return list;
         }
-        public static List<CommonList> GetColorList()
+
+        public static List<CommonList> GetSizeList(int pageno,int pageSize)
         {
-            SMSEntities db = new SMSEntities();
+            //SMSEntities db = new SMSEntities();
             List<CommonList> list = new List<CommonList>();
 
-            list = db.Colors
+            list = App.db.Sizes
+                       .Where(x => x.IsDeleted == false)
+                       .Select(x => new CommonList
+                       {
+                           ID = x.ID,
+                           Name = x.Name,
+                           Description = x.Description
+                       }).OrderByDescending(x=>x.ID).Skip(pageno*pageSize).Take(pageSize).ToList();
+            return list;
+
+        }
+
+        public static List<CommonList> GetColorList()
+        {
+            //SMSEntities db = new SMSEntities();
+            List<CommonList> list = new List<CommonList>();
+
+            list = App.db.Colors
                         .Where(x => x.IsDeleted == false)                         
                         .Select(x => new CommonList
                         {

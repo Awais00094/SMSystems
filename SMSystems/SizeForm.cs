@@ -16,13 +16,30 @@ namespace SMSystems
     {
         public long ID = -1;
         public List<CommonList> SearchList = new List<CommonList>();
+        int pageNo = 1;
+        int pages = -1;
+        int pageSize = 2;
         public SizeForm()
         {
             InitializeComponent();
-            FillGrid();
+            getPages();
+            FillGrid(pageNo-1);
+            //FillGrid();
+
             ChangingFeildsVisibility(false);
         }
 
+        private void getPages()
+        {
+            pages = CommonBLL.getSizesListCount();
+            pages = pages / pageSize;
+            this.PageIndicator.Text = pageNo+"/" + pages;
+        }
+
+        protected override void OnLoad(EventArgs e)
+        {
+            
+        }
         protected void ChangingFeildsVisibility(bool state)
         {
             this.updateDescriptiontxt.Enabled = state;
@@ -76,8 +93,21 @@ namespace SMSystems
             SearchList = dt;
             this.SizeGridView.DataSource = dt;
             this.SizeGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            this.PageIndicator.Text = "1/" + pages;
 
         }
+        public void FillGrid(int pageno)
+        {
+
+            var dt = CommonBLL.GetSizeList(pageno,pageSize);
+            SearchList = dt;
+            this.SizeGridView.DataSource = dt;
+            this.SizeGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            this.PageIndicator.Text = pageNo + "/" + pages;
+
+
+        }
+
 
         private void updatebtn_Click(object sender, EventArgs e)
         {
@@ -120,14 +150,49 @@ namespace SMSystems
             SizeGridView.ClearSelection();
         }
 
-        private void btnNext_Click(object sender, EventArgs e)
+        private void lastBtn_Click(object sender, EventArgs e)
         {
+
+            FillGrid(pages-1);
+            this.PageIndicator.Text = pages + "/" + pages;
 
         }
 
-        private void btnPrevious_Click(object sender, EventArgs e)
+        private void nextBtn_Click(object sender, EventArgs e)
+        {
+            pageNo++;
+            if (pageNo <= pages)
+            {
+                FillGrid(pageNo-1);
+            }
+            else
+            {
+                pageNo--;
+            }
+        }
+
+        private void prevBtn_Click(object sender, EventArgs e)
         {
 
+            pageNo--;
+            if (pageNo >= 1)
+            {
+                FillGrid(pageNo-1);
+            }
+            else
+            {
+                pageNo++;
+            }
         }
+
+        private void fist_Click(object sender, EventArgs e)
+        {
+            
+            FillGrid(0);
+            this.PageIndicator.Text = 1 + "/" + pages;
+
+
+        }
+
     }
 }

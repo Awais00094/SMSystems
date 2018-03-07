@@ -188,5 +188,10 @@ namespace SMSystems
         {
             Validator.ValidateDecimal(sender, e);
         }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

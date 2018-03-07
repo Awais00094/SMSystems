@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App.cs" />
     <Compile Include="BLL\CommonBLL.cs" />
     <Compile Include="BLL\ExpenseBLL.cs" />
     <Compile Include="BLL\ProductBLL.cs" />

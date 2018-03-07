@@ -30,16 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InsertRec));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Companiesbtn = new System.Windows.Forms.Button();
             this.buttonIndicator = new System.Windows.Forms.Panel();
+            this.eventLog1 = new System.Diagnostics.EventLog();
+            this.Container = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.Companiesbtn = new System.Windows.Forms.Button();
             this.colorbtn = new System.Windows.Forms.Button();
             this.categoriesbtn = new System.Windows.Forms.Button();
             this.shoetype = new System.Windows.Forms.Button();
             this.expensebtn = new System.Windows.Forms.Button();
             this.sizebtn = new System.Windows.Forms.Button();
-            this.eventLog1 = new System.Diagnostics.EventLog();
-            this.Container = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).BeginInit();
             this.SuspendLayout();
@@ -61,6 +61,35 @@
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // buttonIndicator
+            // 
+            this.buttonIndicator.BackColor = System.Drawing.Color.SaddleBrown;
+            this.buttonIndicator.Location = new System.Drawing.Point(6, 9);
+            this.buttonIndicator.Name = "buttonIndicator";
+            this.buttonIndicator.Size = new System.Drawing.Size(5, 33);
+            this.buttonIndicator.TabIndex = 4;
+            // 
+            // eventLog1
+            // 
+            this.eventLog1.SynchronizingObject = this;
+            // 
+            // Container
+            // 
+            this.Container.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Container.Location = new System.Drawing.Point(150, 0);
+            this.Container.Name = "Container";
+            this.Container.Size = new System.Drawing.Size(820, 514);
+            this.Container.TabIndex = 2;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.SaddleBrown;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(150, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1, 514);
+            this.panel2.TabIndex = 3;
+            // 
             // Companiesbtn
             // 
             this.Companiesbtn.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -68,7 +97,7 @@
             this.Companiesbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Companiesbtn.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Companiesbtn.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.Companiesbtn.Image = ((System.Drawing.Image)(resources.GetObject("Companiesbtn.Image")));
+            this.Companiesbtn.Image = global::SMSystems.Properties.Resources.man_with_company__1_;
             this.Companiesbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Companiesbtn.Location = new System.Drawing.Point(12, 123);
             this.Companiesbtn.Name = "Companiesbtn";
@@ -78,14 +107,6 @@
             this.Companiesbtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Companiesbtn.UseVisualStyleBackColor = true;
             this.Companiesbtn.Click += new System.EventHandler(this.Companiesbtn_Click);
-            // 
-            // buttonIndicator
-            // 
-            this.buttonIndicator.BackColor = System.Drawing.Color.SaddleBrown;
-            this.buttonIndicator.Location = new System.Drawing.Point(6, 9);
-            this.buttonIndicator.Name = "buttonIndicator";
-            this.buttonIndicator.Size = new System.Drawing.Size(5, 33);
-            this.buttonIndicator.TabIndex = 4;
             // 
             // colorbtn
             // 
@@ -149,7 +170,7 @@
             this.expensebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.expensebtn.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.expensebtn.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.expensebtn.Image = ((System.Drawing.Image)(resources.GetObject("expensebtn.Image")));
+            this.expensebtn.Image = global::SMSystems.Properties.Resources.money__1_;
             this.expensebtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.expensebtn.Location = new System.Drawing.Point(12, 199);
             this.expensebtn.Name = "expensebtn";
@@ -177,27 +198,6 @@
             this.sizebtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.sizebtn.UseVisualStyleBackColor = true;
             this.sizebtn.Click += new System.EventHandler(this.sizebtn_Click);
-            // 
-            // eventLog1
-            // 
-            this.eventLog1.SynchronizingObject = this;
-            // 
-            // Container
-            // 
-            this.Container.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Container.Location = new System.Drawing.Point(150, 0);
-            this.Container.Name = "Container";
-            this.Container.Size = new System.Drawing.Size(820, 514);
-            this.Container.TabIndex = 2;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.SaddleBrown;
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(150, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1, 514);
-            this.panel2.TabIndex = 3;
             // 
             // InsertRec
             // 

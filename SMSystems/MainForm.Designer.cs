@@ -47,7 +47,9 @@
             this.NavHeader = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.Container = new System.Windows.Forms.Panel();
-            this.MinimizeBtn = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.ShoppingList = new Bunifu.Framework.UI.BunifuTileButton();
+            this.QuitBtn = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.MinimizeMaximizeBtn = new System.Windows.Forms.Button();
             this.notificationBtn = new System.Windows.Forms.Button();
@@ -63,7 +65,6 @@
             this.SupplierBtn = new System.Windows.Forms.Button();
             this.ReportsBtn = new System.Windows.Forms.Button();
             this.ProductsBtn = new System.Windows.Forms.Button();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.SideBar.SuspendLayout();
             this.topLogo.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -241,7 +242,8 @@
             // NavHeader
             // 
             this.NavHeader.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.NavHeader.Controls.Add(this.MinimizeBtn);
+            this.NavHeader.Controls.Add(this.ShoppingList);
+            this.NavHeader.Controls.Add(this.QuitBtn);
             this.NavHeader.Controls.Add(this.button2);
             this.NavHeader.Controls.Add(this.MinimizeMaximizeBtn);
             this.NavHeader.Controls.Add(this.notificationBtn);
@@ -266,30 +268,49 @@
             // Container
             // 
             this.Container.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Container.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Container.Cursor = System.Windows.Forms.Cursors.Default;
             this.Container.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Container.Location = new System.Drawing.Point(159, 111);
             this.Container.Name = "Container";
             this.Container.Size = new System.Drawing.Size(1000, 529);
             this.Container.TabIndex = 15;
             // 
-            // MinimizeBtn
+            // ShoppingList
             // 
-            this.MinimizeBtn.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.MinimizeBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.MinimizeBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.MinimizeBtn.FlatAppearance.BorderSize = 0;
-            this.MinimizeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MinimizeBtn.Font = new System.Drawing.Font("Segoe UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MinimizeBtn.ForeColor = System.Drawing.Color.White;
-            this.MinimizeBtn.Image = global::SMSystems.Properties.Resources.icons8_close_window_26;
-            this.MinimizeBtn.Location = new System.Drawing.Point(953, 15);
-            this.MinimizeBtn.Name = "MinimizeBtn";
-            this.MinimizeBtn.Size = new System.Drawing.Size(33, 27);
-            this.MinimizeBtn.TabIndex = 18;
-            this.MinimizeBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.MinimizeBtn.UseVisualStyleBackColor = true;
-            this.MinimizeBtn.Click += new System.EventHandler(this.MinimizeBtn_Click);
+            this.ShoppingList.BackColor = System.Drawing.Color.SaddleBrown;
+            this.ShoppingList.color = System.Drawing.Color.SaddleBrown;
+            this.ShoppingList.colorActive = System.Drawing.Color.Chocolate;
+            this.ShoppingList.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ShoppingList.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ShoppingList.ForeColor = System.Drawing.Color.White;
+            this.ShoppingList.Image = global::SMSystems.Properties.Resources.clipboards;
+            this.ShoppingList.ImagePosition = 14;
+            this.ShoppingList.ImageZoom = 50;
+            this.ShoppingList.LabelPosition = 29;
+            this.ShoppingList.LabelText = "Shopping List";
+            this.ShoppingList.Location = new System.Drawing.Point(93, 15);
+            this.ShoppingList.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ShoppingList.Name = "ShoppingList";
+            this.ShoppingList.Size = new System.Drawing.Size(81, 78);
+            this.ShoppingList.TabIndex = 21;
+            // 
+            // QuitBtn
+            // 
+            this.QuitBtn.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.QuitBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.QuitBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.QuitBtn.FlatAppearance.BorderSize = 0;
+            this.QuitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.QuitBtn.Font = new System.Drawing.Font("Segoe UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QuitBtn.ForeColor = System.Drawing.Color.White;
+            this.QuitBtn.Image = global::SMSystems.Properties.Resources.icons8_close_window_26;
+            this.QuitBtn.Location = new System.Drawing.Point(953, 15);
+            this.QuitBtn.Name = "QuitBtn";
+            this.QuitBtn.Size = new System.Drawing.Size(33, 27);
+            this.QuitBtn.TabIndex = 18;
+            this.QuitBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.QuitBtn.UseVisualStyleBackColor = true;
+            this.QuitBtn.Click += new System.EventHandler(this.MinimizeBtn_Click);
             // 
             // button2
             // 
@@ -370,15 +391,15 @@
             this.ShoppingBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ShoppingBtn.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ShoppingBtn.ForeColor = System.Drawing.Color.White;
-            this.ShoppingBtn.Image = global::SMSystems.Properties.Resources.Bag_24;
+            this.ShoppingBtn.Image = global::SMSystems.Properties.Resources.shopping__1_;
             this.ShoppingBtn.ImagePosition = 14;
             this.ShoppingBtn.ImageZoom = 50;
             this.ShoppingBtn.LabelPosition = 29;
             this.ShoppingBtn.LabelText = "Shopping";
-            this.ShoppingBtn.Location = new System.Drawing.Point(23, 19);
+            this.ShoppingBtn.Location = new System.Drawing.Point(13, 15);
             this.ShoppingBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ShoppingBtn.Name = "ShoppingBtn";
-            this.ShoppingBtn.Size = new System.Drawing.Size(64, 74);
+            this.ShoppingBtn.Size = new System.Drawing.Size(74, 78);
             this.ShoppingBtn.TabIndex = 14;
             this.ShoppingBtn.Click += new System.EventHandler(this.ShoppingBtn_Click);
             // 
@@ -402,7 +423,7 @@
             this.PurchaseBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PurchaseBtn.Font = new System.Drawing.Font("Segoe UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PurchaseBtn.ForeColor = System.Drawing.Color.White;
-            this.PurchaseBtn.Image = ((System.Drawing.Image)(resources.GetObject("PurchaseBtn.Image")));
+            this.PurchaseBtn.Image = global::SMSystems.Properties.Resources.credit_card_and_purchase_receipt;
             this.PurchaseBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.PurchaseBtn.Location = new System.Drawing.Point(8, 310);
             this.PurchaseBtn.Name = "PurchaseBtn";
@@ -421,7 +442,7 @@
             this.CategoriesBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CategoriesBtn.Font = new System.Drawing.Font("Segoe UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CategoriesBtn.ForeColor = System.Drawing.Color.White;
-            this.CategoriesBtn.Image = ((System.Drawing.Image)(resources.GetObject("CategoriesBtn.Image")));
+            this.CategoriesBtn.Image = global::SMSystems.Properties.Resources.four_black_squares;
             this.CategoriesBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.CategoriesBtn.Location = new System.Drawing.Point(8, 266);
             this.CategoriesBtn.Name = "CategoriesBtn";
@@ -492,7 +513,7 @@
             this.ExpensesBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ExpensesBtn.Font = new System.Drawing.Font("Segoe UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ExpensesBtn.ForeColor = System.Drawing.Color.White;
-            this.ExpensesBtn.Image = ((System.Drawing.Image)(resources.GetObject("ExpensesBtn.Image")));
+            this.ExpensesBtn.Image = global::SMSystems.Properties.Resources.money__2_;
             this.ExpensesBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ExpensesBtn.Location = new System.Drawing.Point(8, 90);
             this.ExpensesBtn.Name = "ExpensesBtn";
@@ -510,7 +531,7 @@
             this.SupplierBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SupplierBtn.Font = new System.Drawing.Font("Segoe UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SupplierBtn.ForeColor = System.Drawing.Color.White;
-            this.SupplierBtn.Image = ((System.Drawing.Image)(resources.GetObject("SupplierBtn.Image")));
+            this.SupplierBtn.Image = global::SMSystems.Properties.Resources.conversation;
             this.SupplierBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.SupplierBtn.Location = new System.Drawing.Point(8, 222);
             this.SupplierBtn.Name = "SupplierBtn";
@@ -546,7 +567,7 @@
             this.ProductsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ProductsBtn.Font = new System.Drawing.Font("Segoe UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ProductsBtn.ForeColor = System.Drawing.Color.White;
-            this.ProductsBtn.Image = ((System.Drawing.Image)(resources.GetObject("ProductsBtn.Image")));
+            this.ProductsBtn.Image = global::SMSystems.Properties.Resources.runner__2_;
             this.ProductsBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ProductsBtn.Location = new System.Drawing.Point(8, 178);
             this.ProductsBtn.Name = "ProductsBtn";
@@ -619,11 +640,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button notificationBtn;
         private System.Windows.Forms.Button settingsBtn;
-        private System.Windows.Forms.Button MinimizeBtn;
+        private System.Windows.Forms.Button QuitBtn;
         private System.Windows.Forms.Button MinimizeMaximizeBtn;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private Bunifu.Framework.UI.BunifuTileButton ShoppingList;
     }
 }
 

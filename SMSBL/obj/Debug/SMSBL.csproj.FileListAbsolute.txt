@@ -26,3 +26,12 @@ D:\SMSystems\SMSBL\bin\Debug\EntityFramework.SqlServer.xml
 D:\SMSystems\SMSBL\obj\Debug\SMSBL.csprojResolveAssemblyReference.cache
 D:\SMSystems\SMSBL\obj\Debug\SMS.BL.dll
 D:\SMSystems\SMSBL\obj\Debug\SMS.BL.pdb
+E:\USTech\SMSystems\SMSBL\bin\Debug\SMS.BL.dll.config
+E:\USTech\SMSystems\SMSBL\bin\Debug\SMS.BL.dll
+E:\USTech\SMSystems\SMSBL\bin\Debug\SMS.BL.pdb
+E:\USTech\SMSystems\SMSBL\bin\Debug\EntityFramework.dll
+E:\USTech\SMSystems\SMSBL\bin\Debug\EntityFramework.SqlServer.dll
+E:\USTech\SMSystems\SMSBL\bin\Debug\EntityFramework.xml
+E:\USTech\SMSystems\SMSBL\bin\Debug\EntityFramework.SqlServer.xml
+E:\USTech\SMSystems\SMSBL\obj\Debug\SMS.BL.dll
+E:\USTech\SMSystems\SMSBL\obj\Debug\SMS.BL.pdb
